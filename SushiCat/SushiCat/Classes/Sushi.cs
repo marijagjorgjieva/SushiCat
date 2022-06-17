@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -11,7 +12,7 @@ namespace SushiCat
     public class Sushi
     {
         public PictureBox[,] sushi = new PictureBox[20, 20];
-
+        private SoundPlayer Player = new SoundPlayer(Properties.Resources.coin);
         public Sushi()
         {
         }
@@ -24,7 +25,7 @@ namespace SushiCat
             {
                 for (int j = 0; j < 20; j++)
                 {
-                    if (Form1.maze.Matrix[i, j] == 0)
+                    if (GameScreen.maze.Matrix[i, j] == 0)
                     {
                        
                        sushi[i,j]=new PictureBox();
@@ -42,18 +43,22 @@ namespace SushiCat
                 startY += 40;
             }
         }
+
+        //eat food method(in class player update score!)
         public void EatFood(int x, int y)
         {
-            if (Form1.maze.Matrix[y, x] == 0)
+            if (GameScreen.maze.Matrix[y, x] == 0)
             {
                 if (sushi[y, x].Visible == true)
                 {
+                    Player.Play();
                     sushi[y, x].Visible = false;
+
                 }
             }
             
         }
 
-        //eat food methode (in class player update score!)
+        
     }
 }

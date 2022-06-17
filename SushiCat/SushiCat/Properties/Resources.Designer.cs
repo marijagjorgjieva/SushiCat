@@ -71,6 +71,15 @@ namespace SushiCat.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream coin {
+            get {
+                return ResourceManager.GetStream("coin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         public static System.Drawing.Bitmap game {
@@ -81,11 +90,29 @@ namespace SushiCat.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream gameAudio {
+            get {
+                return ResourceManager.GetStream("gameAudio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream startMusic1 {
+            get {
+                return ResourceManager.GetStream("startMusic1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap lastchance {
+        public static System.Drawing.Bitmap StartScreen {
             get {
-                object obj = ResourceManager.GetObject("lastchance", resourceCulture);
+                object obj = ResourceManager.GetObject("StartScreen", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

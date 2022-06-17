@@ -33,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,36 +45,46 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Cat.cs" />
     <Compile Include="Classes\Maze.cs" />
     <Compile Include="Classes\Sushi.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="GameMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="GameMenu.Designer.cs">
+      <DependentUpon>GameMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameScreen.Designer.cs">
+      <DependentUpon>GameScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="GameMenu.resx">
+      <DependentUpon>GameMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameScreen.resx">
+      <DependentUpon>GameScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -87,34 +98,44 @@
     <None Include="Resources\game.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\sushi.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Artboard 27.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ezgif-1-6691fea4e5.gif" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\R %281%29.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Artboard 27 %281%29.png" />
+    <None Include="Resources\mix_04s %28audio-joiner.com%29.wav" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\s.gif" />
+    <None Include="Resources\gameAudio.wav" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Artboard 27 %282%29.png" />
+    <None Include="Resources\gg.wav" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\lastchance.gif" />
+    <None Include="Resources\coin.wav" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\cc.png" />
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\R.png" />
+    <None Include="Resources\StartScreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\startMusic.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

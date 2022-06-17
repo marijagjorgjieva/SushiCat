@@ -59,7 +59,7 @@ namespace SushiCat
                     case 4: CatImage.Left -= 40; xCoordinate--; break;
                     
                 }
-                Form1.sushi.EatFood(xCoordinate, yCoordinate);
+                GameScreen.sushi.EatFood(xCoordinate, yCoordinate);
             }
                
                 
@@ -86,7 +86,7 @@ namespace SushiCat
             if(x<0 || y < 0 || x>19 || y>19)
                 return false;
 
-            if (Form1.maze.Matrix[y, x] == 0)
+            if (GameScreen.maze.Matrix[y, x] == 0)
                 return true;
             else
                 return false;
