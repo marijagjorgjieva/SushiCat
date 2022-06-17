@@ -1,0 +1,11 @@
+C:\Users\Marija\Documents\GitHub\SushiCat\SushiCat\SushiCat\bin\Debug\SushiCat.exe.config
+C:\Users\Marija\Documents\GitHub\SushiCat\SushiCat\SushiCat\bin\Debug\SushiCat.exe
+C:\Users\Marija\Documents\GitHub\SushiCat\SushiCat\SushiCat\bin\Debug\SushiCat.pdb
+C:\Users\Marija\Documents\GitHub\SushiCat\SushiCat\SushiCat\obj\Debug\SushiCat.csproj.AssemblyReference.cache
+C:\Users\Marija\Documents\GitHub\SushiCat\SushiCat\SushiCat\obj\Debug\SushiCat.csproj.SuggestedBindingRedirects.cache
+C:\Users\Marija\Documents\GitHub\SushiCat\SushiCat\SushiCat\obj\Debug\SushiCat.Form1.resources
+C:\Users\Marija\Documents\GitHub\SushiCat\SushiCat\SushiCat\obj\Debug\SushiCat.Properties.Resources.resources
+C:\Users\Marija\Documents\GitHub\SushiCat\SushiCat\SushiCat\obj\Debug\SushiCat.csproj.GenerateResource.cache
+C:\Users\Marija\Documents\GitHub\SushiCat\SushiCat\SushiCat\obj\Debug\SushiCat.csproj.CoreCompileInputs.cache
+C:\Users\Marija\Documents\GitHub\SushiCat\SushiCat\SushiCat\obj\Debug\SushiCat.exe
+C:\Users\Marija\Documents\GitHub\SushiCat\SushiCat\SushiCat\obj\Debug\SushiCat.pdb
