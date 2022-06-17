@@ -75,6 +75,9 @@ namespace SushiCat
                 case 4: x--; break;
             }
 
+            if(x<0 || y < 0 || x>19 || y>19)
+                return false;
+
             if (Form1.maze.Matrix[y, x] == 0)
                 return true;
             else

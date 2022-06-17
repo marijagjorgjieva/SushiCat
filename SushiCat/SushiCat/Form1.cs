@@ -16,12 +16,15 @@ namespace SushiCat
     {
         public static Maze maze = new Maze(1);
         public static Cat cat = new Cat();
+        //kje se cuva vo sledna player class
+        private int level = 1;
         public Form1()
         {
 
             InitializeComponent();
             //to do maze . create maze
             cat.SetImage(this);
+            maze.SetUpGame(level);
             Invalidate();
             DoubleBuffered = true;
         }
@@ -32,9 +35,9 @@ namespace SushiCat
             maze.Draw(e.Graphics);
         }
         //----------------added bs
-        protected override void OnKeyDown(KeyEventArgs e)
+        protected override void OnKeyUp(KeyEventArgs e)
         {
-            base.OnKeyDown(e);
+            base.OnKeyUp(e);
             switch (e.KeyCode)
             {
                 case Keys.Up: cat.nextDirection = 1; cat.MoveCat(1); break;

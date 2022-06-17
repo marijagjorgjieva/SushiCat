@@ -15,6 +15,10 @@ namespace SushiCat
         public Maze(int level)
         {
             Obstacles = new List<Rectangle>();
+        }
+        
+        public void SetUpGame(int level)
+        {             
             switch (level)
             {
                 case 1:
@@ -44,7 +48,6 @@ namespace SushiCat
             }
 
         }
-        //todo method set up game
         public void Draw(Graphics g)
         {
             Brush brush = new SolidBrush(Color.MediumPurple);
