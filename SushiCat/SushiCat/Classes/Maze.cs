@@ -9,8 +9,8 @@ namespace SushiCat
 {
     public class Maze
     {
-        public List<Rectangle> Obstacles { get; set; }
-        private int[,] Matrix = new int[20, 20];
+        private List<Rectangle> Obstacles { get; set; }
+        public int[,] Matrix = new int[20, 20];
 
         public Maze(int level)
         {
@@ -28,8 +28,8 @@ namespace SushiCat
                       { 1,0,0,0,0,1,0,0,0,1,1,0,0,0,0,0,0,0,0,1 },
                       { 1,0,0,0,0,0,0,1,1,1,1,1,1,0,0,1,0,0,0,1 },
                       { 1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,1 },
-                      { 0,0,0,1,1,0,1,1,1,1,1,1,1,1,0,1,1,0,0,0 },
-                      { 0,0,0,1,1,0,1,1,1,1,1,1,1,1,0,1,1,0,0,0 },
+                      { 0,0,0,1,1,0,1,1,0,1,1,1,1,1,0,1,1,0,0,0 },
+                      { 0,0,0,1,1,0,1,1,1,1,1,0,1,1,0,1,1,0,0,0 },
                       { 1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,1 },
                       { 1,0,0,0,0,0,0,1,1,1,1,1,1,0,0,1,0,0,0,1 },
                       { 1,0,0,0,0,1,0,0,0,1,1,0,0,0,0,0,0,0,0,1 },
@@ -44,9 +44,10 @@ namespace SushiCat
             }
 
         }
+        //todo method set up game
         public void Draw(Graphics g)
         {
-            Brush brush = new SolidBrush(Color.Black);
+            Brush brush = new SolidBrush(Color.MediumPurple);
             int startX = 0;
             int startY = 0;
             for (int i = 0; i < 20; i++)
