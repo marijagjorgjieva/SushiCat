@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Classes\Cat.cs" />
     <Compile Include="Classes\Maze.cs" />
+    <Compile Include="Classes\Sushi.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +85,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\game.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sushi.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Artboard 27.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ezgif-1-6691fea4e5.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\R %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Artboard 27 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\s.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Artboard 27 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lastchance.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cc.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\R.png" />

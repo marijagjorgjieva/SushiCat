@@ -63,6 +63,16 @@ namespace SushiCat.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap Cat {
+            get {
+                object obj = ResourceManager.GetObject("Cat", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap game {
             get {
                 object obj = ResourceManager.GetObject("game", resourceCulture);
@@ -73,9 +83,19 @@ namespace SushiCat.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap R {
+        public static System.Drawing.Bitmap lastchance {
             get {
-                object obj = ResourceManager.GetObject("R", resourceCulture);
+                object obj = ResourceManager.GetObject("lastchance", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap sushi {
+            get {
+                object obj = ResourceManager.GetObject("sushi", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
