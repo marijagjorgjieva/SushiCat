@@ -37,6 +37,11 @@ namespace SushiCat
                        form.Controls.Add(sushi[i, j]);
                        sushi[i, j].BringToFront();
                     }
+                    else
+                    {
+                        sushi[i, j] = new PictureBox();
+                        sushi[i,j].Visible = false;
+                    }
                     startX += 40;
                 }
                 startX = 0;
