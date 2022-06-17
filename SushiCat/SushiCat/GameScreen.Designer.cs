@@ -48,6 +48,7 @@
             this.BackgroundImage = global::SushiCat.Properties.Resources.game;
             this.ClientSize = new System.Drawing.Size(800, 800);
             this.Controls.Add(this.wmp);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "GameScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SushiCat";
