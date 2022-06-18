@@ -67,14 +67,15 @@ namespace SushiCat
             logo.BringToFront();
             //label da odi vo dr klasa
             
-            gameInfo.Text = String.Format("Player:{0} Points:{1}", player.Name, player.Points);
-            gameInfo.Location = new Point(6 * 40, 60);
-            gameInfo.Font = new Font("November", 12, FontStyle.Regular);
+            gameInfo.Text = String.Format("Player:{0}   Points:{1}", player.Name, player.Points);
+            gameInfo.Location = new Point(7 * 40, 40);
+            gameInfo.Font = new Font("Arial", 12, FontStyle.Bold);
             gameInfo.TextAlign = ContentAlignment.MiddleCenter;
             gameInfo.AutoSize = false;
-            gameInfo.Width = 40 * 8;
+            gameInfo.Width = 40 * 6;
             this.Controls.Add(gameInfo);
-            gameInfo.BackColor = Color.Transparent;
+            gameInfo.BackColor = ColorTranslator.FromHtml("#F9B9BA");
+            gameInfo.BorderStyle = BorderStyle.Fixed3D;
             gameInfo.BringToFront();
 
 
