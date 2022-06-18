@@ -34,9 +34,9 @@ namespace SushiCat
             CatImage.Image = Properties.Resources.Cat;
             currentDirection = 0;
             nextDirection = 0;
-            xCoordinate = 320/40;
-            yCoordinate = 360/40;
-            CatImage.Location = new Point(320, 360);
+            xCoordinate = 360/40;
+            yCoordinate = 280/40;
+            CatImage.Location = new Point(360, 280);
             CatImage.Size = new Size(40, 40);
             formInstance.Controls.Add(CatImage);
             CatImage.Name = "CatImage";

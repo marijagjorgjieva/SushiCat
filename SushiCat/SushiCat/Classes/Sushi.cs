@@ -13,6 +13,8 @@ namespace SushiCat
     {
         public PictureBox[,] sushi = new PictureBox[20, 20];
         private SoundPlayer Player = new SoundPlayer(Properties.Resources.coin);
+        //smeni za koga ke se pusta da nema tamu sushi
+        private int CollectedSushi = -1;
         public Sushi()
         {
         }
@@ -58,7 +60,8 @@ namespace SushiCat
                 {
                     Player.Play();
                     sushi[y, x].Visible = false;
-
+                    CollectedSushi += 1;
+                    GameScreen.player.Points = CollectedSushi;
                 }
             }
             

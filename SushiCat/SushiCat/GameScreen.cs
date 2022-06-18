@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using WMPLib;
 
 namespace SushiCat
 {
@@ -23,9 +23,11 @@ namespace SushiCat
         public static Sushi sushi = new Sushi();
         private Timer timer = new Timer();
         private bool canClick = true;
+        //ova ne treba ovde ama fine!
+        public static Player player = new Player();
         //kje se cuva vo sledna player class
         private int level = 1;
-      
+        Label gameInfo = new Label();
         public GameScreen()
         {
 
@@ -53,11 +55,35 @@ namespace SushiCat
             wmp.Ctlcontrols.play();
             wmp.Visible = false;
 
-           
+            //----------vo dr klasa
+            //logo  da odi vo dr klasa
+            PictureBox logo = new PictureBox();
+            logo.Image = Properties.Resources.logo;
+            logo.Location = new Point(240, 360);
+            logo.Size = new Size(320, 80);
+            this.Controls.Add(logo);
+            logo.SizeMode = PictureBoxSizeMode.CenterImage;
+            logo.BackgroundImage = Properties.Resources.image;
+            logo.BringToFront();
+            //label da odi vo dr klasa
+            
+            gameInfo.Text = String.Format("Player:{0} Points:{1}", player.Name, player.Points);
+            gameInfo.Location = new Point(6 * 40, 60);
+            gameInfo.Font = new Font("November", 12, FontStyle.Regular);
+            gameInfo.TextAlign = ContentAlignment.MiddleCenter;
+            gameInfo.AutoSize = false;
+            gameInfo.Width = 40 * 8;
+            this.Controls.Add(gameInfo);
+            gameInfo.BackColor = Color.Transparent;
+            gameInfo.BringToFront();
+
+
+
         }
 
         private void timert(object sender, EventArgs e)
         {
+            gameInfo.Text = String.Format("Player:{0} Points:{1}", player.Name, player.Points);
             canClick = true;
         }
 
@@ -65,8 +91,11 @@ namespace SushiCat
         {
             //todo method refresh game
             maze.Draw(e.Graphics);
+            
+
+
         }
-      
+
         protected override void OnKeyDown(KeyEventArgs e)
         {
             if (canClick)
@@ -82,7 +111,9 @@ namespace SushiCat
                 }
                 canClick = false;
             }
-            
+            gameInfo.Text = String.Format("Player:{0} Points:{1}", player.Name, player.Points);
+
+
         }
 
 

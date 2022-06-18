@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace SushiCat
 {
@@ -29,14 +30,14 @@ namespace SushiCat
                       { 1,0,0,1,1,1,0,1,0,0,1,0,1,0,1,1,1,0,0,1 },
                       { 1,0,0,1,0,0,0,1,0,0,0,0,1,0,1,0,1,0,0,1 },
                       { 1,1,0,1,0,1,0,0,0,1,1,0,0,0,1,0,1,0,1,1 },
-                      { 1,0,0,0,0,1,0,0,0,1,1,0,0,0,0,0,0,0,0,1 },
-                      { 1,0,0,0,0,0,0,1,1,1,1,1,1,0,0,1,0,0,0,1 },
+                      { 1,0,0,0,0,1,0,0,1,1,1,1,0,0,0,0,0,0,0,1 },
+                      { 1,0,0,0,0,0,0,1,1,0,0,1,1,0,0,1,0,0,0,1 },
                       { 1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,1 },
-                      { 0,0,0,1,1,0,1,1,0,1,1,1,1,1,0,1,1,0,0,0 },
-                      { 0,0,0,1,1,0,1,1,1,1,1,0,1,1,0,1,1,0,0,0 },
+                      { 0,0,0,1,1,0,1,1,1,1,1,1,1,1,0,1,1,0,0,0 },
+                      { 0,0,0,1,1,0,1,1,1,1,1,1,1,1,0,1,1,0,0,0 },
                       { 1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,1 },
-                      { 1,0,0,0,0,0,0,1,1,1,1,1,1,0,0,1,0,0,0,1 },
-                      { 1,0,0,0,0,1,0,0,0,1,1,0,0,0,0,0,0,0,0,1 },
+                      { 1,0,0,0,0,0,0,1,1,0,0,1,1,0,0,1,0,0,0,1 },
+                      { 1,0,0,0,0,1,0,0,1,1,1,1,0,0,0,0,0,0,0,1 },
                       { 1,1,0,1,0,1,0,0,0,1,1,0,0,0,1,0,1,0,1,1 },
                       { 1,0,0,1,0,0,0,1,0,0,0,0,1,0,1,0,1,0,0,1 },
                       { 1,0,0,1,1,1,0,1,0,0,1,0,1,0,1,1,1,0,0,1 },
@@ -50,7 +51,9 @@ namespace SushiCat
         }
         public void Draw(Graphics g)
         {
-            Brush brush = new SolidBrush(Color.MediumPurple);
+            Image myImage = Properties.Resources.image;
+            TextureBrush brush = new TextureBrush(myImage);
+            brush.WrapMode = System.Drawing.Drawing2D.WrapMode.Tile;
             int startX = 0;
             int startY = 0;
             for (int i = 0; i < 20; i++)
@@ -68,6 +71,8 @@ namespace SushiCat
                 startY += 40;
             }
             g.FillRectangles(brush, Obstacles.ToArray());
+           
+
         }
 
         //public bool clashes()

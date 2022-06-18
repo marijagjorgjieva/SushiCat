@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="Classes\Cat.cs" />
     <Compile Include="Classes\Maze.cs" />
+    <Compile Include="Classes\Player.cs" />
     <Compile Include="Classes\Sushi.cs" />
     <Compile Include="GameMenu.cs">
       <SubType>Form</SubType>
@@ -142,6 +143,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Granite-staggered-405x420mm-Architextures.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sushi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Artboard 36.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
