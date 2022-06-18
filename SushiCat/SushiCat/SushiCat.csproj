@@ -156,5 +156,17 @@
   <ItemGroup>
     <None Include="Resources\Artboard 36.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Right.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Left.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Down.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Up.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

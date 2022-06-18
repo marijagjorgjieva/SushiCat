@@ -15,8 +15,6 @@ namespace SushiCat
         public int xCoordinate = 0;
         public int yCoordinate = 0;
         public int currentDirection = 0;
-        public int nextDirection = 0;
-
         public Cat()
         {
             timer.Interval = 220;
@@ -31,9 +29,8 @@ namespace SushiCat
         public void SetImage(Form formInstance)
         {
             //place cat image on board
-            CatImage.Image = Properties.Resources.Cat;
+            CatImage.Image = Properties.Resources.Right;
             currentDirection = 0;
-            nextDirection = 0;
             xCoordinate = 360/40;
             yCoordinate = 280/40;
             CatImage.Location = new Point(360, 280);
@@ -51,8 +48,10 @@ namespace SushiCat
             if (checkDir(direction))
             {
                 currentDirection = direction;
+                changeImage();
                 switch (direction)
                 {
+                    
                     case 1: CatImage.Top -= 40; yCoordinate--; break;
                     case 2: CatImage.Left += 40; xCoordinate++; break;
                     case 3: CatImage.Top += 40; yCoordinate++; break;
@@ -92,7 +91,18 @@ namespace SushiCat
                 return false;
 
         }
+        private void changeImage()
+        {
+            switch (currentDirection)
+            {
+                case 1: CatImage.Image = Properties.Resources.Up; break;
+                case 2: CatImage.Image=Properties.Resources.Right; break;
+                case 3: CatImage.Image = Properties.Resources.Down; break;
+                case 4: CatImage.Image = Properties.Resources.Left; break;
+            }
+        }
     }
+   
    
 }
 
