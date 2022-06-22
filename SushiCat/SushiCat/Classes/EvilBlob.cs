@@ -17,7 +17,7 @@ namespace SushiCat
 
         public EvilBlob(GameScreen formInstance)
         {
-            timer.Interval = 250;
+            timer.Interval = 300;
             timer.Enabled = true;
             timer.Tick += new EventHandler(timert);
 
@@ -25,7 +25,7 @@ namespace SushiCat
             hometimer.Enabled = false;
             hometimer.Tick += new EventHandler(hometimer_Tick);
 
-            waittimer.Interval = 2000;
+            waittimer.Interval = 3000;
             waittimer.Enabled = false;
             waittimer.Tick += new EventHandler(waittimer_t);
             this.formInstance = formInstance;

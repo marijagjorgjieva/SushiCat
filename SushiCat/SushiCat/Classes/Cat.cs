@@ -18,7 +18,7 @@ namespace SushiCat
         private GameScreen formInstance;
         public Cat(GameScreen formInstance)
         {
-            timer.Interval = 150;
+            timer.Interval = 100;
             timer.Enabled = true;
             timer.Tick += new EventHandler(TimerTick);
             this.formInstance = formInstance;
