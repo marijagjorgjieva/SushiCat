@@ -11,7 +11,7 @@ namespace SushiCat
     public class Cat
     {
         private PictureBox CatImage = new PictureBox();
-        private Timer timer = new Timer();
+        public Timer timer = new Timer();
         public int xCoordinate = 0;
         public int yCoordinate = 0;
         public int currentDirection = 0;
@@ -20,17 +20,14 @@ namespace SushiCat
         {
             timer.Interval = 150;
             timer.Enabled = true;
-            timer.Tick += new EventHandler(timert);
+            timer.Tick += new EventHandler(TimerTick);
             this.formInstance = formInstance;
         }
 
-        private void timer_Tick(object sender, EventArgs e)
-        {
-            MoveCat(currentDirection);
-        }
+     
+
         public void SetImage()
         {
-            //place cat image on board
             CatImage.Image = Properties.Resources.Right;
             currentDirection = 0;
             xCoordinate = 360/40;
@@ -42,21 +39,18 @@ namespace SushiCat
             CatImage.SizeMode = PictureBoxSizeMode.StretchImage;
             CatImage.BackColor = Color.Transparent;
         }
-        //----------added bs
-
-        //change direction 
-        public void changeDirection(int direction)
+       
+        public void ChangeDirection(int direction)
         {
             currentDirection = direction;
         }
-        public void MoveCat(int direction)
+        private void MoveCat(int direction)
         {
-            // Move Cat
-
-            if (checkDir(direction))
+  
+            if (CheckDirection(direction))
             {
                 currentDirection = direction;
-                changeImage();
+                ChangeImage();
                 switch (direction)
                 {
                     
@@ -67,17 +61,16 @@ namespace SushiCat
                     
                 }
                 formInstance.sushi.EatFood(xCoordinate, yCoordinate);
-            }
-               
-                
-                
+                formInstance.gameInfo.UpdateLabel();
+            }     
         }
-        private void timert(object sender, EventArgs e)
+
+        private void TimerTick(object sender, EventArgs e)
         {
             MoveCat(currentDirection);
         }
-        //napraj po elegantno kaj maze.Matrix
-        private bool checkDir(int direction)
+      
+        private bool CheckDirection(int direction)
         {
             int x = xCoordinate;
             int y = yCoordinate;
@@ -98,7 +91,7 @@ namespace SushiCat
                 return false;
 
         }
-        private void changeImage()
+        private void ChangeImage()
         {
             switch (currentDirection)
             {
@@ -108,6 +101,7 @@ namespace SushiCat
                 case 4: CatImage.Image = Properties.Resources.Left; break;
             }
         }
+       
     }
    
    

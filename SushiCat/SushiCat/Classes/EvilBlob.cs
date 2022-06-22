@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SushiCat
@@ -11,7 +7,9 @@ namespace SushiCat
     public class EvilBlob
     {
         public PictureBox BlobImage = new PictureBox();
-        private Timer timer = new Timer();
+        public Timer timer = new Timer();
+        public Timer hometimer = new Timer();
+        public Timer waittimer=new Timer();
         public int xCoordinate = 0;
         public int yCoordinate = 0;
         public int currentDirection = 0;
@@ -19,10 +17,53 @@ namespace SushiCat
 
         public EvilBlob(GameScreen formInstance)
         {
-            timer.Interval = 270;
+            timer.Interval = 250;
             timer.Enabled = true;
             timer.Tick += new EventHandler(timert);
+
+            hometimer.Interval = 1;
+            hometimer.Enabled = false;
+            hometimer.Tick += new EventHandler(hometimer_Tick);
+
+            waittimer.Interval = 2000;
+            waittimer.Enabled = false;
+            waittimer.Tick += new EventHandler(waittimer_t);
             this.formInstance = formInstance;
+        }
+
+        private void waittimer_t(object sender, EventArgs e)
+        {
+            timer.Enabled = true;
+            waittimer.Enabled= false;
+        }
+
+        private void hometimer_Tick(object sender, EventArgs e)
+        {
+            int xpos = 360;
+            int ypos = 480;
+            int newX = BlobImage.Location.X;
+            int newY = BlobImage.Location.Y;
+
+            if (newX == xpos) { newX = 360; }
+            else if (newX > xpos) { newX -= 10; }
+            else
+                newX += 10;
+
+            if (newY == ypos) { newY = 480; }
+            if (newY > ypos) { newY -= 10; }
+            else
+                newY += 10;
+            BlobImage.Location=new Point(newX, newY);
+            if (BlobImage.Location.Y == ypos && BlobImage.Location.X == xpos)
+            {
+                xCoordinate = 360/40;
+                yCoordinate = 480/40;
+                BlobImage.Location = new Point(360, 480);
+                hometimer.Enabled = false;
+                waittimer.Enabled = true;
+                formInstance.cat.timer.Enabled = true;
+
+            }
         }
 
         public void SetImage()
@@ -65,6 +106,7 @@ namespace SushiCat
         {
             UpdateDirection();
             MoveBlob(currentDirection);
+            CheckForCollision();
         }
         public void UpdateDirection()
         {
@@ -191,7 +233,31 @@ namespace SushiCat
                 return false;
 
         }
+        private void CheckForCollision()
+        {
+            if (xCoordinate == formInstance.cat.xCoordinate && yCoordinate == formInstance.cat.yCoordinate)
+            {
+                
+                formInstance.gameInfo.lives+=1;
+                if (formInstance.gameInfo.lives == 2)
+                {
+                    timer.Enabled = false;
+                    hometimer.Enabled = false;
+                    waittimer.Enabled = false;
+                    formInstance.cat.timer.Enabled = false;
+                }
+                else
+                {
+                    timer.Enabled = false;
+                    hometimer.Enabled = true;
+                    formInstance.cat.timer.Enabled = false;
+                }
+                formInstance.gameInfo.RemoveLives();
+            }
+
+        }
        
+
     }
 
 

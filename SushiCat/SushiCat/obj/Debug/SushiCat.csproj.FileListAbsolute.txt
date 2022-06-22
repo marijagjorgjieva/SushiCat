@@ -12,3 +12,4 @@ C:\Users\Marija\Documents\GitHub\SushiCat\SushiCat\SushiCat\obj\Debug\Interop.WM
 C:\Users\Marija\Documents\GitHub\SushiCat\SushiCat\SushiCat\obj\Debug\SushiCat.csproj.ResolveComReference.cache
 C:\Users\Marija\Documents\GitHub\SushiCat\SushiCat\SushiCat\obj\Debug\SushiCat.GameScreen.resources
 C:\Users\Marija\Documents\GitHub\SushiCat\SushiCat\SushiCat\obj\Debug\SushiCat.GameMenu.resources
+C:\Users\Marija\Documents\GitHub\SushiCat\SushiCat\SushiCat\obj\Debug\SushiCat.GameOverScreen.resources

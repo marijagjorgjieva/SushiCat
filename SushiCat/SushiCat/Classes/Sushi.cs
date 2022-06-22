@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
+﻿using System.Drawing;
 using System.Media;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SushiCat
@@ -63,7 +58,7 @@ namespace SushiCat
                     Player.Play();
                     sushi[y, x].Visible = false;
                     CollectedSushi += 1;
-                    formInstance.player.Points = CollectedSushi;
+                    formInstance.gameInfo.Points = CollectedSushi;
 
                 }
             }

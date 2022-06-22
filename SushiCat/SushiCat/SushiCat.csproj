@@ -53,9 +53,15 @@
   <ItemGroup>
     <Compile Include="Classes\Cat.cs" />
     <Compile Include="Classes\EvilBlob.cs" />
+    <Compile Include="Classes\GameInfo.cs" />
     <Compile Include="Classes\Maze.cs" />
-    <Compile Include="Classes\Player.cs" />
     <Compile Include="Classes\Sushi.cs" />
+    <Compile Include="GameOverScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameOverScreen.Designer.cs">
+      <DependentUpon>GameOverScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="GameMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +76,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GameOverScreen.resx">
+      <DependentUpon>GameOverScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GameMenu.resx">
       <DependentUpon>GameMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -175,6 +184,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\stupidBlob.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blankHeart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fullHeart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bump.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bumpp.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\game over.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
