@@ -10,23 +10,25 @@ namespace SushiCat
 {
     public class Cat
     {
-        public PictureBox CatImage = new PictureBox();
+        private PictureBox CatImage = new PictureBox();
         private Timer timer = new Timer();
         public int xCoordinate = 0;
         public int yCoordinate = 0;
         public int currentDirection = 0;
-        public Cat()
+        private GameScreen formInstance;
+        public Cat(GameScreen formInstance)
         {
-            timer.Interval = 220;
+            timer.Interval = 150;
             timer.Enabled = true;
             timer.Tick += new EventHandler(timert);
+            this.formInstance = formInstance;
         }
 
         private void timer_Tick(object sender, EventArgs e)
         {
             MoveCat(currentDirection);
         }
-        public void SetImage(Form formInstance)
+        public void SetImage()
         {
             //place cat image on board
             CatImage.Image = Properties.Resources.Right;
@@ -41,6 +43,12 @@ namespace SushiCat
             CatImage.BackColor = Color.Transparent;
         }
         //----------added bs
+
+        //change direction 
+        public void changeDirection(int direction)
+        {
+            currentDirection = direction;
+        }
         public void MoveCat(int direction)
         {
             // Move Cat
@@ -58,7 +66,7 @@ namespace SushiCat
                     case 4: CatImage.Left -= 40; xCoordinate--; break;
                     
                 }
-                GameScreen.sushi.EatFood(xCoordinate, yCoordinate);
+                formInstance.sushi.EatFood(xCoordinate, yCoordinate);
             }
                
                 
@@ -66,7 +74,6 @@ namespace SushiCat
         }
         private void timert(object sender, EventArgs e)
         {
-            // Keep moving pacman
             MoveCat(currentDirection);
         }
         //napraj po elegantno kaj maze.Matrix
@@ -85,7 +92,7 @@ namespace SushiCat
             if(x<0 || y < 0 || x>19 || y>19)
                 return false;
 
-            if (GameScreen.maze.Matrix[y, x] == 0)
+            if (formInstance.maze.Matrix[y, x] != 1)
                 return true;
             else
                 return false;
@@ -96,7 +103,7 @@ namespace SushiCat
             switch (currentDirection)
             {
                 case 1: CatImage.Image = Properties.Resources.Up; break;
-                case 2: CatImage.Image=Properties.Resources.Right; break;
+                case 2: CatImage.Image = Properties.Resources.Right; break;
                 case 3: CatImage.Image = Properties.Resources.Down; break;
                 case 4: CatImage.Image = Properties.Resources.Left; break;
             }

@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Cat.cs" />
+    <Compile Include="Classes\EvilBlob.cs" />
     <Compile Include="Classes\Maze.cs" />
     <Compile Include="Classes\Player.cs" />
     <Compile Include="Classes\Sushi.cs" />
@@ -117,14 +118,6 @@
     <None Include="Resources\coin.wav" />
   </ItemGroup>
   <ItemGroup>
-    <COMReference Include="AxWMPLib">
-      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>aximp</WrapperTool>
-      <Isolated>False</Isolated>
-    </COMReference>
     <COMReference Include="WMPLib">
       <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
       <VersionMajor>1</VersionMajor>
@@ -167,6 +160,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Up.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coin2.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\otherCoin.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coinchime.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\evilBlob.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stupidBlob.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

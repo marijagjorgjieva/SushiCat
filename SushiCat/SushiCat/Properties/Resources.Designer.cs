@@ -73,9 +73,18 @@ namespace SushiCat.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream coin {
+        public static System.IO.UnmanagedMemoryStream coin2 {
             get {
-                return ResourceManager.GetStream("coin", resourceCulture);
+                return ResourceManager.GetStream("coin2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream coinchime {
+            get {
+                return ResourceManager.GetStream("coinchime", resourceCulture);
             }
         }
         
@@ -85,6 +94,16 @@ namespace SushiCat.Properties {
         public static System.Drawing.Bitmap Down {
             get {
                 object obj = ResourceManager.GetObject("Down", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap evilBlob {
+            get {
+                object obj = ResourceManager.GetObject("evilBlob", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -183,6 +202,16 @@ namespace SushiCat.Properties {
         public static System.Drawing.Bitmap StartScreen {
             get {
                 object obj = ResourceManager.GetObject("StartScreen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap stupidBlob {
+            get {
+                object obj = ResourceManager.GetObject("stupidBlob", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

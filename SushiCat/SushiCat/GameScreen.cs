@@ -1,15 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Media;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using WMPLib;
+
 
 namespace SushiCat
 {
@@ -17,14 +9,13 @@ namespace SushiCat
     public partial class GameScreen : Form
     {
 
-        
-        public static Maze maze = new Maze(1);
-        public static Cat cat = new Cat();
-        public static Sushi sushi = new Sushi();
+        public EvilBlob evilBlob;
+        public Maze maze;
+        public Cat cat;
+        public Sushi sushi;
         private Timer timer = new Timer();
-        private bool canClick = true;
         //ova ne treba ovde ama fine!
-        public static Player player = new Player();
+        public Player player;
         //kje se cuva vo sledna player class
         private int level = 1;
         Label gameInfo = new Label();
@@ -32,28 +23,27 @@ namespace SushiCat
         {
 
             InitializeComponent();
-            
+             evilBlob = new EvilBlob(this);
+             maze = new Maze(1);
+             cat = new Cat(this);
+             sushi = new Sushi(this);
+            player = new Player();
             //disable resizing
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             
             //------------setup game (vo dr func da odiseto vova)
             maze.SetUpGame(level);
-            sushi.CreateSushi(this);
-            cat.SetImage(this);
-
+            sushi.CreateSushi();
+            cat.SetImage();
+            evilBlob.SetImage();
+           
             //timer
-            timer.Interval = 220;
+            timer.Interval = 150;
             timer.Enabled = true;
             timer.Tick += new EventHandler(timert);
 
             DoubleBuffered = true;
            
-
-            //-------adding--media
-            wmp.URL = @"gg.mp3";
-            wmp.settings.playCount = 9999; 
-            wmp.Ctlcontrols.play();
-            wmp.Visible = false;
 
             //----------vo dr klasa
             //logo  da odi vo dr klasa
@@ -85,7 +75,7 @@ namespace SushiCat
         private void timert(object sender, EventArgs e)
         {
             gameInfo.Text = String.Format("Player:{0} Points:{1}", player.Name, player.Points);
-            canClick = true;
+            
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)
@@ -99,19 +89,17 @@ namespace SushiCat
 
         protected override void OnKeyDown(KeyEventArgs e)
         {
-            if (canClick)
-            {
+            
                 base.OnKeyDown(e);
                 switch (e.KeyCode)
                 {
-                    case Keys.Up:  cat.MoveCat(1); break;
-                    case Keys.Right:  cat.MoveCat(2); break;
-                    case Keys.Down:  cat.MoveCat(3); break;
-                    case Keys.Left:  cat.MoveCat(4); break;
+                    case Keys.Up:  cat.changeDirection(1); break;
+                    case Keys.Right:  cat.changeDirection(2); break;
+                    case Keys.Down:  cat.changeDirection(3); break;
+                    case Keys.Left:  cat.changeDirection(4); break;
 
                 }
-                canClick = false;
-            }
+           
             gameInfo.Text = String.Format("Player:{0} Points:{1}", player.Name, player.Points);
 
 

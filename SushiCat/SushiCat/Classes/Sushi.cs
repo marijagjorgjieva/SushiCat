@@ -12,14 +12,16 @@ namespace SushiCat
     public class Sushi
     {
         public PictureBox[,] sushi = new PictureBox[20, 20];
-        private SoundPlayer Player = new SoundPlayer(Properties.Resources.coin);
-        //smeni za koga ke se pusta da nema tamu sushi
-        private int CollectedSushi = -1;
-        public Sushi()
+        private SoundPlayer Player = new SoundPlayer(Properties.Resources.coin2);
+        private int CollectedSushi = 0;
+        private GameScreen formInstance;
+        public Sushi(GameScreen formInstance)
         {
+            Player.Load();
+            this.formInstance = formInstance;
         }
 
-        public void CreateSushi(Form form)
+        public void CreateSushi()
         {
             int startX = 0;
             int startY = 0;
@@ -27,7 +29,7 @@ namespace SushiCat
             {
                 for (int j = 0; j < 20; j++)
                 {
-                    if (GameScreen.maze.Matrix[i, j] == 0)
+                    if (formInstance.maze.Matrix[i, j] == 0)
                     {
                        
                        sushi[i,j]=new PictureBox();
@@ -36,7 +38,7 @@ namespace SushiCat
                        sushi[i, j].SizeMode = PictureBoxSizeMode.CenterImage;
                        sushi[i, j].Location = new Point(startX, startY);
                        sushi[i, j].BackColor = Color.Transparent;
-                       form.Controls.Add(sushi[i, j]);
+                       formInstance.Controls.Add(sushi[i, j]);
                        sushi[i, j].BringToFront();
                     }
                     else
@@ -51,17 +53,18 @@ namespace SushiCat
             }
         }
 
-        //eat food method(in class player update score!)
+
         public void EatFood(int x, int y)
         {
-            if (GameScreen.maze.Matrix[y, x] == 0)
+            if (formInstance.maze.Matrix[y, x] == 0)
             {
                 if (sushi[y, x].Visible == true)
                 {
                     Player.Play();
                     sushi[y, x].Visible = false;
                     CollectedSushi += 1;
-                    GameScreen.player.Points = CollectedSushi;
+                    formInstance.player.Points = CollectedSushi;
+
                 }
             }
             

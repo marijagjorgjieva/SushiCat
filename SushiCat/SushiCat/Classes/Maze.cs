@@ -12,14 +12,14 @@ namespace SushiCat
     {
         private List<Rectangle> Obstacles { get; set; }
         public int[,] Matrix = new int[20, 20];
-
+       
         public Maze(int level)
         {
             Obstacles = new List<Rectangle>();
         }
         
         public void SetUpGame(int level)
-        {             
+        { 
             switch (level)
             {
                 case 1:
@@ -31,7 +31,7 @@ namespace SushiCat
                       { 1,0,0,1,0,0,0,1,0,0,0,0,1,0,1,0,1,0,0,1 },
                       { 1,1,0,1,0,1,0,0,0,1,1,0,0,0,1,0,1,0,1,1 },
                       { 1,0,0,0,0,1,0,0,1,1,1,1,0,0,0,0,0,0,0,1 },
-                      { 1,0,0,0,0,0,0,1,1,0,0,1,1,0,0,1,0,0,0,1 },
+                      { 1,0,0,0,0,0,0,1,1,3,0,1,1,0,0,1,0,0,0,1 },
                       { 1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,1 },
                       { 0,0,0,1,1,0,1,1,1,1,1,1,1,1,0,1,1,0,0,0 },
                       { 0,0,0,1,1,0,1,1,1,1,1,1,1,1,0,1,1,0,0,0 },
@@ -75,7 +75,7 @@ namespace SushiCat
 
         }
 
-        //public bool clashes()
+       
 
     }
 }

@@ -8,10 +8,7 @@ C:\Users\Marija\Documents\GitHub\SushiCat\SushiCat\SushiCat\obj\Debug\SushiCat.c
 C:\Users\Marija\Documents\GitHub\SushiCat\SushiCat\SushiCat\obj\Debug\SushiCat.csproj.CoreCompileInputs.cache
 C:\Users\Marija\Documents\GitHub\SushiCat\SushiCat\SushiCat\obj\Debug\SushiCat.exe
 C:\Users\Marija\Documents\GitHub\SushiCat\SushiCat\SushiCat\obj\Debug\SushiCat.pdb
-C:\Users\Marija\Documents\GitHub\SushiCat\SushiCat\SushiCat\bin\Debug\Interop.WMPLib.dll
-C:\Users\Marija\Documents\GitHub\SushiCat\SushiCat\SushiCat\bin\Debug\AxInterop.WMPLib.dll
 C:\Users\Marija\Documents\GitHub\SushiCat\SushiCat\SushiCat\obj\Debug\Interop.WMPLib.dll
-C:\Users\Marija\Documents\GitHub\SushiCat\SushiCat\SushiCat\obj\Debug\AxInterop.WMPLib.dll
 C:\Users\Marija\Documents\GitHub\SushiCat\SushiCat\SushiCat\obj\Debug\SushiCat.csproj.ResolveComReference.cache
 C:\Users\Marija\Documents\GitHub\SushiCat\SushiCat\SushiCat\obj\Debug\SushiCat.GameScreen.resources
 C:\Users\Marija\Documents\GitHub\SushiCat\SushiCat\SushiCat\obj\Debug\SushiCat.GameMenu.resources
