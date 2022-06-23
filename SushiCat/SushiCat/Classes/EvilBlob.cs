@@ -17,7 +17,7 @@ namespace SushiCat
 
         public EvilBlob(GameScreen formInstance)
         {
-            timer.Interval = 300;
+            timer.Interval = 400;
             timer.Enabled = true;
             timer.Tick += new EventHandler(timert);
 
@@ -29,10 +29,12 @@ namespace SushiCat
             waittimer.Enabled = false;
             waittimer.Tick += new EventHandler(waittimer_t);
             this.formInstance = formInstance;
+            
         }
 
         private void waittimer_t(object sender, EventArgs e)
         {
+           
             timer.Enabled = true;
             waittimer.Enabled= false;
         }
@@ -45,14 +47,14 @@ namespace SushiCat
             int newY = BlobImage.Location.Y;
 
             if (newX == xpos) { newX = 360; }
-            else if (newX > xpos) { newX -= 10; }
+            else if (newX > xpos) { newX -= 5; }
             else
-                newX += 10;
+                newX += 5;
 
             if (newY == ypos) { newY = 480; }
-            if (newY > ypos) { newY -= 10; }
+            if (newY > ypos) { newY -= 5; }
             else
-                newY += 10;
+                newY += 5;
             BlobImage.Location=new Point(newX, newY);
             if (BlobImage.Location.Y == ypos && BlobImage.Location.X == xpos)
             {
@@ -62,6 +64,7 @@ namespace SushiCat
                 hometimer.Enabled = false;
                 waittimer.Enabled = true;
                 formInstance.cat.timer.Enabled = true;
+                formInstance.maze.SetUpMaze();
 
             }
         }
@@ -233,7 +236,7 @@ namespace SushiCat
                 return false;
 
         }
-        private void CheckForCollision()
+        public void CheckForCollision()
         {
             if (xCoordinate == formInstance.cat.xCoordinate && yCoordinate == formInstance.cat.yCoordinate)
             {
@@ -253,6 +256,7 @@ namespace SushiCat
                     formInstance.cat.timer.Enabled = false;
                 }
                 formInstance.gameInfo.RemoveLives();
+                formInstance.maze.SetUpMaze();
             }
 
         }

@@ -17,8 +17,8 @@ namespace SushiCat
         Label gameInfo;
         public int lives = -1;
         private List<PictureBox> livesImages;
-        SoundPlayer sound = new SoundPlayer(Properties.Resources.bumpp);
-        SoundPlayer gameOver = new SoundPlayer(Properties.Resources.game_over);
+        private static SoundPlayer  sound = new SoundPlayer(Properties.Resources.bumpp);
+        private static SoundPlayer gameOver = new SoundPlayer(Properties.Resources.game_over);
         public GameInfo(GameScreen screen)
         {
             gameInfo = new Label();
@@ -90,6 +90,7 @@ namespace SushiCat
                 livesImages[lives].Image = Properties.Resources.blankHeart;
                 gameOver.Play();
                 formInstance.GameOver();
+               
             }
             else
             {

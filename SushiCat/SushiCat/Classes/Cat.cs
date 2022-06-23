@@ -24,8 +24,6 @@ namespace SushiCat
             this.formInstance = formInstance;
         }
 
-     
-
         public void SetImage()
         {
             CatImage.Image = Properties.Resources.Right;
@@ -68,6 +66,7 @@ namespace SushiCat
         private void TimerTick(object sender, EventArgs e)
         {
             MoveCat(currentDirection);
+            formInstance.evilBlob.CheckForCollision();
         }
       
         private bool CheckDirection(int direction)

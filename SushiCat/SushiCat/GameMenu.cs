@@ -29,6 +29,8 @@ namespace SushiCat
             gameScreen = new GameScreen();
             gameScreen.Show();
             this.Hide();
+            gameScreen.SetupGame();
+            
         }
     }
 }
