@@ -16,7 +16,9 @@ namespace SushiCat
         //od sega
         private Graphics g;
         private bool loadedMaze = false;
+
         private GameOverScreen gameOver;
+        private WinnerScreen gameWin;
 
         public GameScreen()
         {
@@ -69,6 +71,12 @@ namespace SushiCat
         {
             gameOver=new GameOverScreen();
             gameOver.Show();
+        }
+
+        public void WinGame()
+        {
+            gameWin = new WinnerScreen();
+            gameWin.Show();
         }
 
         //loading of maze sega dodadeno

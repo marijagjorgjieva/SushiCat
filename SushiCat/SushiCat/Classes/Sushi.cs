@@ -11,6 +11,7 @@ namespace SushiCat
         private static SoundPlayer Player = new SoundPlayer(Properties.Resources.coin2);
         private int CollectedSushi = 0;
         private GameScreen formInstance;
+        private int maxSushiCounter = 0;
         public Sushi(GameScreen formInstance)
         {
             Player.Load();
@@ -35,6 +36,7 @@ namespace SushiCat
                        sushi[i, j].BackColor = Color.Transparent;
                        formInstance.Controls.Add(sushi[i, j]);
                        sushi[i, j].BringToFront();
+                       maxSushiCounter++;
                     }
                     startX += 40;
                 }
@@ -57,6 +59,14 @@ namespace SushiCat
             }
             GC.Collect();
             GC.WaitForPendingFinalizers();
+            if(CollectedSushi==maxSushiCounter)
+            {
+                formInstance.WinGame();
+                formInstance.evilBlob.timer.Enabled = false;
+                formInstance.evilBlob.hometimer.Enabled = false;
+                formInstance.evilBlob.waittimer.Enabled = false;
+                formInstance.cat.timer.Enabled = false;
+            }
 
         }
 
