@@ -12,9 +12,9 @@ namespace SushiCat
     {
         private PictureBox CatImage = new PictureBox();
         public Timer timer = new Timer();
-        public int xCoordinate = 0;
-        public int yCoordinate = 0;
-        public int currentDirection = 0;
+        public int xCoordinate { set; get; } = 0;
+        public int yCoordinate { set; get; } = 0;
+        public int currentDirection { set; get; } = 0;
         private GameScreen formInstance;
         public Cat(GameScreen formInstance)
         {

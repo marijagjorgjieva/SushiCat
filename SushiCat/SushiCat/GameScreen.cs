@@ -8,24 +8,47 @@ namespace SushiCat
 
     public partial class GameScreen : Form
     { 
+        //game elements
         public EvilBlob evilBlob;
         public Maze maze;
         public Cat cat;
         public Sushi sushi;
         public GameInfo gameInfo;
-        //od sega
+        
+        //used for drawing the maze
         private Graphics g;
+        private Timer timer = new Timer();
         private bool loadedMaze = false;
 
+        //win and game over forms
         private GameOverScreen gameOver;
         private WinnerScreen gameWin;
 
         public GameScreen()
         {
             InitializeComponent();
+            this.KeyPreview = true;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             DoubleBuffered = true;
+
+            //these are used for maze loading
             g = this.CreateGraphics();//od sega
+            timer.Interval = 1000;
+            timer.Start();
+            timer.Tick += new EventHandler(timerT);    
+            
+        }
+
+        //used for maze loading
+        private void timerT(object sender, EventArgs e)
+        {
+            if (!loadedMaze)
+            {
+                maze.SetUpMaze();
+                loadedMaze = true;
+               
+
+            }
         }
 
         //setting up game elements
@@ -38,12 +61,10 @@ namespace SushiCat
             cat = new Cat(this);
             sushi = new Sushi(this);
           
-
             //creating game elements
             sushi.CreateSushi();
             evilBlob.SetImage();
             cat.SetImage();
-            maze.SetUpMaze();
         }
 
         // key down event for cat control
@@ -57,47 +78,45 @@ namespace SushiCat
                 case Keys.Down:  cat.ChangeDirection(3); break;
                 case Keys.Left:  cat.ChangeDirection(4); break;
             }
-           
         }
-       
+
         // form closed event
         private void GameScreen_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
         }
 
-        //game over event
+        //game over form load
         public void GameOver()
         {
-            gameOver=new GameOverScreen();
+            gameOver =new GameOverScreen();
             gameOver.Show();
+            
         }
 
+        //win game form load
         public void WinGame()
         {
             gameWin = new WinnerScreen();
             gameWin.Show();
         }
 
-        //loading of maze sega dodadeno
-        private void GameScreen_MouseHover(object sender, EventArgs e)
+        private void GoBackClick(object sender, EventArgs e)
         {
-            if (!loadedMaze)
-            {
-                maze.SetUpMaze();
-                loadedMaze = true;
-            }
+            
+            gameOver=new GameOverScreen();
+            gameOver.Show();
+            StopGame();
+            gameInfo.gameOver.Play();
+           
+        }
+        public void StopGame()
+        {
+            this.evilBlob.timer.Enabled = false;
+            this.evilBlob.hometimer.Enabled = false;
+            this.evilBlob.waittimer.Enabled = false;
+            this.cat.timer.Enabled = false;
         }
 
-      /*  private void GameScreen_Paint(object sender, PaintEventArgs e)
-        {
-            //maze.SetUpMaze();
-            *//* if (!loadedMaze)
-             {
-                 maze.SetUpMaze();
-                 loadedMaze = true;
-             }*//*
-            maze.SetUpMaze();
-        }*/
     }
 }

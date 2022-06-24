@@ -7,7 +7,7 @@ namespace SushiCat
 {
     public class Sushi
     {
-        public PictureBox[,] sushi = new PictureBox[20, 20];
+        private PictureBox[,] sushi = new PictureBox[20, 20];
         private static SoundPlayer Player = new SoundPlayer(Properties.Resources.coin2);
         private int CollectedSushi = 0;
         private GameScreen formInstance;
@@ -62,10 +62,6 @@ namespace SushiCat
             if(CollectedSushi==maxSushiCounter)
             {
                 formInstance.WinGame();
-                formInstance.evilBlob.timer.Enabled = false;
-                formInstance.evilBlob.hometimer.Enabled = false;
-                formInstance.evilBlob.waittimer.Enabled = false;
-                formInstance.cat.timer.Enabled = false;
             }
 
         }

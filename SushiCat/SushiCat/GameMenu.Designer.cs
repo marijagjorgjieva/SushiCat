@@ -34,14 +34,20 @@
             // 
             // btnPlay
             // 
+            this.btnPlay.BackColor = System.Drawing.Color.LightPink;
+            this.btnPlay.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPlay.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnPlay.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightBlue;
+            this.btnPlay.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleVioletRed;
             this.btnPlay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPlay.Font = new System.Drawing.Font("Perpetua", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPlay.Location = new System.Drawing.Point(335, 601);
+            this.btnPlay.Font = new System.Drawing.Font("Bahnschrift", 21.9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPlay.ForeColor = System.Drawing.Color.White;
+            this.btnPlay.Location = new System.Drawing.Point(335, 552);
             this.btnPlay.Name = "btnPlay";
-            this.btnPlay.Size = new System.Drawing.Size(102, 49);
+            this.btnPlay.Size = new System.Drawing.Size(100, 50);
             this.btnPlay.TabIndex = 0;
             this.btnPlay.Text = "Play";
-            this.btnPlay.UseVisualStyleBackColor = true;
+            this.btnPlay.UseVisualStyleBackColor = false;
             this.btnPlay.Click += new System.EventHandler(this.btnPlay_Click);
             // 
             // GameMenu

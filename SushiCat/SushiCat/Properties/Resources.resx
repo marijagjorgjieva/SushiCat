@@ -119,7 +119,7 @@
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="blankHeart" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\blankHeart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\resources\blankheart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bump" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bump.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -180,9 +180,6 @@
   </data>
   <data name="StartScreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\StartScreen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="stupidBlob" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\stupidBlob.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="sushi" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Artboard 27 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

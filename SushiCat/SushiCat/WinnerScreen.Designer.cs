@@ -34,11 +34,12 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = global::SushiCat.Properties.Resources.game;
-            this.ClientSize = new System.Drawing.Size(468, 412);
+            this.ClientSize = new System.Drawing.Size(368, 312);
             this.MaximizeBox = false;
             this.Name = "WinnerScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "WinnerScreen";
+            this.TopMost = true;
             this.ResumeLayout(false);
 
         }

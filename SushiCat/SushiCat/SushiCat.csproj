@@ -55,6 +55,7 @@
     <Compile Include="Classes\EvilBlob.cs" />
     <Compile Include="Classes\GameInfo.cs" />
     <Compile Include="Classes\Maze.cs" />
+    <Compile Include="Classes\Player.cs" />
     <Compile Include="Classes\Sushi.cs" />
     <Compile Include="GameOverScreen.cs">
       <SubType>Form</SubType>
@@ -147,13 +148,7 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\StartScreen.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\startMusic.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icon.ico" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Granite-staggered-405x420mm-Architextures.jpg" />
@@ -192,9 +187,6 @@
     <None Include="Resources\evilBlob.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\stupidBlob.gif" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\blankHeart.png" />
   </ItemGroup>
   <ItemGroup>
@@ -208,6 +200,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\game over.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StartScreen.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

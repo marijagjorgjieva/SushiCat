@@ -12,20 +12,23 @@ namespace SushiCat
     public class GameInfo
     {
         public String Name { get; set; } = "No name!";
-        public int Points = 0;
+        public int Points { set; get; } = 0;
         private GameScreen formInstance;
         Label gameInfo;
-        public int lives = -1;
+        public int lives { set; get; } = -1;
         private List<PictureBox> livesImages;
         private static SoundPlayer  sound = new SoundPlayer(Properties.Resources.bumpp);
-        private static SoundPlayer gameOver = new SoundPlayer(Properties.Resources.game_over);
+        public SoundPlayer gameOver;
         public GameInfo(GameScreen screen)
         {
             gameInfo = new Label();
+            gameOver = new SoundPlayer(Properties.Resources.game_over);
             this.formInstance = screen;
             MakeLabel();
             MakeLogo();
             MakeLives();
+
+           
         }
 
         private void MakeLives()
@@ -66,20 +69,20 @@ namespace SushiCat
         {
             gameInfo.Text = String.Format("Player:{0}   Points:{1}", Name, Points);
             gameInfo.Location = new Point(0, 2);
-            gameInfo.Font = new Font("Arial", 12, FontStyle.Bold);
+            gameInfo.Font = new Font("Bahnschrift", 12, FontStyle.Bold);
             gameInfo.TextAlign = ContentAlignment.MiddleCenter;
             gameInfo.AutoSize = false;
             gameInfo.Width = 40 * 6;
             gameInfo.Height = 28;
             formInstance.Controls.Add(gameInfo);
             gameInfo.BackColor = ColorTranslator.FromHtml("#F9B9BA");
+            gameInfo.ForeColor = Color.White;
             gameInfo.BorderStyle = BorderStyle.Fixed3D;
             gameInfo.BringToFront();
         }
         public void UpdateLabel()
         {
-            gameInfo.Text = String.Format("Player:{0}   Points:{1}", formInstance.gameInfo.Name, formInstance.gameInfo.Points);
-            //ako e maks!
+            gameInfo.Text = String.Format("Player: {0}   Points: {1}", formInstance.gameInfo.Name, formInstance.gameInfo.Points);
         }
 
         public void RemoveLives()
@@ -87,17 +90,15 @@ namespace SushiCat
             
             if (lives == 2)
             {
-                livesImages[lives].Image = Properties.Resources.blankHeart;
                 gameOver.Play();
                 formInstance.GameOver();
-               
             }
             else
             {
                 sound.Play();
-                livesImages[lives].Image = Properties.Resources.blankHeart;
             }
-            
+            livesImages[lives].Image = Properties.Resources.blankHeart;
+
         }
     }
 }

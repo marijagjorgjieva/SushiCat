@@ -17,7 +17,7 @@ namespace SushiCat
 
         public EvilBlob(GameScreen formInstance)
         {
-            timer.Interval = 400;
+            timer.Interval = 350;
             timer.Enabled = true;
             timer.Tick += new EventHandler(timert);
 
@@ -115,7 +115,7 @@ namespace SushiCat
         {
             int x = xCoordinate;
             int y = yCoordinate;
-            double distance1, distance2, distance3, distance4 = 0;
+            double distance1, distance2, distance3, distance4;
             if (checkDir(1))
             {
                 distance1 = euclid(x, y-1, formInstance.cat.xCoordinate, formInstance.cat.yCoordinate);
@@ -244,10 +244,7 @@ namespace SushiCat
                 formInstance.gameInfo.lives+=1;
                 if (formInstance.gameInfo.lives == 2)
                 {
-                    timer.Enabled = false;
-                    hometimer.Enabled = false;
-                    waittimer.Enabled = false;
-                    formInstance.cat.timer.Enabled = false;
+                    formInstance.StopGame();
                 }
                 else
                 {

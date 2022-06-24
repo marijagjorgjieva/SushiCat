@@ -35,13 +35,14 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = global::SushiCat.Properties.Resources.game;
-            this.ClientSize = new System.Drawing.Size(468, 412);
+            this.ClientSize = new System.Drawing.Size(368, 312);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "GameOverScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GAME OVER!";
+            this.TopMost = true;
             this.ResumeLayout(false);
 
         }

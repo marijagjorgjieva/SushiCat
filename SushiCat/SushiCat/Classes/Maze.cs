@@ -14,7 +14,7 @@ namespace SushiCat
         private static TextureBrush brush = new TextureBrush(myImage);
         private Graphics g;
         private List<Rectangle> Obstacles { get; set; }
-        public int[,] Matrix = new int[20, 20];
+        public int[,] Matrix { set; get; } = new int[20, 20];
        
         public Maze(Graphics g)
         {
