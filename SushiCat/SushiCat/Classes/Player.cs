@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SushiCat.Properties;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,17 +10,21 @@ namespace SushiCat.Classes
     public class Player
     {
         public String PlayerName { get; set; }
-        public int highscore { get; set; } = 0;
+        public int highscore { get; set; }
 
-        public Player(string playerName)
+        public Player()
         {
-            PlayerName = playerName;
+            PlayerName = (string)Settings.Default["PlayerName"];
+            highscore = (int)Settings.Default["MaxScore"];
         }
         
         public void updateHighScore(int score)
         {
             if(isHighScore(score))
                 highscore = score;
+            Settings.Default["MaxScore"]=highscore;
+            Settings.Default.Save();
+
         }
 
         public bool isHighScore(int score)

@@ -110,7 +110,7 @@
       <DependentUpon>WinnerScreen.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <Compile Include="Properties\Resources.Designer.cs">

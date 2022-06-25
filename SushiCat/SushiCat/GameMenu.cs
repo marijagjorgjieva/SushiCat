@@ -24,21 +24,31 @@ namespace SushiCat
             //disable resizing
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             Player.PlayLooping();
-            player = new Player("No Name");
+            player = new Player();
+            UpdateLabel();
         }
 
         private void btnPlay_Click(object sender, EventArgs e)
+        {
+            createGame();            
+        }
+        public void createGame()
         {
             Player.Stop();
             gameScreen = new GameScreen(this);
             gameScreen.Show();
             this.Hide();
             gameScreen.SetupGame();
-            
         }
         public void UpdateLabel()
         {
             label.Text = String.Format("Player: {0}\nHighscore: {1}",player.PlayerName,player.highscore);
+        }
+
+        internal void ShowAgain()
+        {
+            this.Show();
+            Player.PlayLooping();
         }
 
         private void btnCustomize(object sender, EventArgs e)

@@ -13,17 +13,24 @@ namespace SushiCat
     public partial class WinnerScreen : Form
     {
         private GameScreen form;
-        public WinnerScreen(GameScreen form)
+        private GameMenu menu;
+        public WinnerScreen(GameScreen form,GameMenu menu)
         {
             InitializeComponent();
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            //this.FormBorderStyle = FormBorderStyle.FixedSingle;
+          
+            this.menu = menu;
             this.form = form;
             int points = form.gameInfo.Points;
             lblScore.Text = String.Format("Score: {0}", points.ToString());
             form.menu.player.updateHighScore(points);
             form.menu.UpdateLabel();
-            //zacuvaj progres
+        }
+        private void btnMenu_Click(object sender, EventArgs e)
+        {
+            menu.ShowAgain();
+            form.Close();
+            this.Close();
         }
     }
 }

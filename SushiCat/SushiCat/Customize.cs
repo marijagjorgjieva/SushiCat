@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SushiCat.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,6 +26,8 @@ namespace SushiCat
             if(tbChangeName.Text!=null && tbChangeName.Text.Length>0)
             {
                 this.menu.player.PlayerName=tbChangeName.Text;
+                Settings.Default["PlayerName"] = tbChangeName.Text;
+                Settings.Default.Save();
                 menu.UpdateLabel();
             }
         }

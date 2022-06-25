@@ -106,6 +106,7 @@
             this.btnPlayAgain.TabIndex = 2;
             this.btnPlayAgain.Text = "Play again";
             this.btnPlayAgain.UseVisualStyleBackColor = false;
+            this.btnPlayAgain.Click += new System.EventHandler(this.btnPlayAgain_Click);
             // 
             // GameOverScreen
             // 

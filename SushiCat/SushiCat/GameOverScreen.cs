@@ -13,10 +13,12 @@ namespace SushiCat
     public partial class GameOverScreen : Form
     {
         private GameScreen form;
-        public GameOverScreen(GameScreen form)
+        private GameMenu menu;
+        public GameOverScreen(GameScreen form, GameMenu menu)
         {
             InitializeComponent();
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.menu = menu;
             this.form = form;
             int points = form.gameInfo.Points;
             lblScore.Text = String.Format("Score: {0}", points.ToString());
@@ -34,9 +36,17 @@ namespace SushiCat
 
         private void btnMenu_Click(object sender, EventArgs e)
         {
-            form.menu.Show();//otvori nova forma N ili odnovo cela app 
-            form.Hide();
+            menu.ShowAgain();
+            form.Close();
             this.Close();
+        }
+
+        private void btnPlayAgain_Click(object sender, EventArgs e)
+        {
+            menu.ShowAgain();
+            form.Close();
+            this.Close();
+            menu.createGame();
         }
     }
 }

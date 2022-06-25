@@ -52,6 +52,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = global::SushiCat.Properties.Resources.game;
             this.ClientSize = new System.Drawing.Size(800, 800);
+            this.ControlBox = false;
             this.Controls.Add(this.goBack);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;

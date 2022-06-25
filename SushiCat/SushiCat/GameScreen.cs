@@ -86,20 +86,20 @@ namespace SushiCat
         // form closed event
         private void GameScreen_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();
+           // Application.Exit();
         }
 
         //game over form load
         public void GameOver()
         {
-            gameOver =new GameOverScreen(this);
+            gameOver =new GameOverScreen(this,menu);
             gameOver.Show();            
         }
 
         //win game form load
         public void WinGame()
         {
-            gameWin = new WinnerScreen(this);
+            gameWin = new WinnerScreen(this,menu);
             gameWin.Show();
             StopGame();
         }
@@ -107,7 +107,7 @@ namespace SushiCat
         private void GoBackClick(object sender, EventArgs e)
         {
             
-            gameOver=new GameOverScreen(this);
+            gameOver=new GameOverScreen(this,menu);
             gameOver.Show();
             StopGame();
             gameInfo.gameOver.Play();
