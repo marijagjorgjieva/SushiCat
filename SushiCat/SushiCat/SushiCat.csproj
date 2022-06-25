@@ -57,6 +57,12 @@
     <Compile Include="Classes\Maze.cs" />
     <Compile Include="Classes\Player.cs" />
     <Compile Include="Classes\Sushi.cs" />
+    <Compile Include="Customize.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customize.Designer.cs">
+      <DependentUpon>Customize.cs</DependentUpon>
+    </Compile>
     <Compile Include="GameOverScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +89,9 @@
     <Compile Include="WinnerScreen.Designer.cs">
       <DependentUpon>WinnerScreen.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Customize.resx">
+      <DependentUpon>Customize.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GameOverScreen.resx">
       <DependentUpon>GameOverScreen.cs</DependentUpon>
     </EmbeddedResource>
@@ -206,6 +215,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\StartScreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OtherScreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\winGif.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

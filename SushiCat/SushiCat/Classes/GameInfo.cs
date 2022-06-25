@@ -11,7 +11,7 @@ namespace SushiCat
 {
     public class GameInfo
     {
-        public String Name { get; set; } = "No name!";
+       
         public int Points { set; get; } = 0;
         private GameScreen formInstance;
         Label gameInfo;
@@ -27,6 +27,7 @@ namespace SushiCat
             MakeLabel();
             MakeLogo();
             MakeLives();
+           
 
            
         }
@@ -67,7 +68,7 @@ namespace SushiCat
         }
         private void MakeLabel()
         {
-            gameInfo.Text = String.Format("Player:{0}   Points:{1}", Name, Points);
+            gameInfo.Text = String.Format("Player:{0}   Points:{1}", formInstance.menu.player.PlayerName, Points);
             gameInfo.Location = new Point(0, 2);
             gameInfo.Font = new Font("Bahnschrift", 12, FontStyle.Bold);
             gameInfo.TextAlign = ContentAlignment.MiddleCenter;
@@ -82,7 +83,7 @@ namespace SushiCat
         }
         public void UpdateLabel()
         {
-            gameInfo.Text = String.Format("Player: {0}   Points: {1}", formInstance.gameInfo.Name, formInstance.gameInfo.Points);
+            gameInfo.Text = String.Format("Player: {0}   Points: {1}", formInstance.menu.player.PlayerName, formInstance.gameInfo.Points);
         }
 
         public void RemoveLives()

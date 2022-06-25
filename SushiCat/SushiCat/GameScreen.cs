@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SushiCat.Classes;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -14,7 +15,8 @@ namespace SushiCat
         public Cat cat;
         public Sushi sushi;
         public GameInfo gameInfo;
-        
+        public GameMenu menu;
+
         //used for drawing the maze
         private Graphics g;
         private Timer timer = new Timer();
@@ -24,11 +26,12 @@ namespace SushiCat
         private GameOverScreen gameOver;
         private WinnerScreen gameWin;
 
-        public GameScreen()
+        public GameScreen(GameMenu menu)
         {
             InitializeComponent();
             this.KeyPreview = true;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.menu = menu;
             DoubleBuffered = true;
 
             //these are used for maze loading
@@ -60,7 +63,7 @@ namespace SushiCat
             maze = new Maze(g);
             cat = new Cat(this);
             sushi = new Sushi(this);
-          
+            
             //creating game elements
             sushi.CreateSushi();
             evilBlob.SetImage();
@@ -89,22 +92,22 @@ namespace SushiCat
         //game over form load
         public void GameOver()
         {
-            gameOver =new GameOverScreen();
-            gameOver.Show();
-            
+            gameOver =new GameOverScreen(this);
+            gameOver.Show();            
         }
 
         //win game form load
         public void WinGame()
         {
-            gameWin = new WinnerScreen();
+            gameWin = new WinnerScreen(this);
             gameWin.Show();
+            StopGame();
         }
 
         private void GoBackClick(object sender, EventArgs e)
         {
             
-            gameOver=new GameOverScreen();
+            gameOver=new GameOverScreen(this);
             gameOver.Show();
             StopGame();
             gameInfo.gameOver.Play();

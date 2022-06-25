@@ -14,3 +14,4 @@ C:\Users\Marija\Documents\GitHub\SushiCat\SushiCat\SushiCat\obj\Debug\SushiCat.G
 C:\Users\Marija\Documents\GitHub\SushiCat\SushiCat\SushiCat\obj\Debug\SushiCat.GameMenu.resources
 C:\Users\Marija\Documents\GitHub\SushiCat\SushiCat\SushiCat\obj\Debug\SushiCat.GameOverScreen.resources
 C:\Users\Marija\Documents\GitHub\SushiCat\SushiCat\SushiCat\obj\Debug\SushiCat.WinnerScreen.resources
+C:\Users\Marija\Documents\GitHub\SushiCat\SushiCat\SushiCat\obj\Debug\SushiCat.Customize.resources

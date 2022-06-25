@@ -42,7 +42,7 @@
             this.goBack.ForeColor = System.Drawing.Color.White;
             this.goBack.Location = new System.Drawing.Point(0, 770);
             this.goBack.Name = "goBack";
-            this.goBack.Size = new System.Drawing.Size(107, 65);
+            this.goBack.Size = new System.Drawing.Size(105, 64);
             this.goBack.TabIndex = 0;
             this.goBack.Text = "Exit";
             this.goBack.Click += new System.EventHandler(this.GoBackClick);

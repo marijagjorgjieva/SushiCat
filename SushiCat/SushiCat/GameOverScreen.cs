@@ -12,9 +12,31 @@ namespace SushiCat
 {
     public partial class GameOverScreen : Form
     {
-        public GameOverScreen()
+        private GameScreen form;
+        public GameOverScreen(GameScreen form)
         {
             InitializeComponent();
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.form = form;
+            int points = form.gameInfo.Points;
+            lblScore.Text = String.Format("Score: {0}", points.ToString());
+            if (form.menu.player.isHighScore(points))
+            {
+                lblNewH.Text = "New Highscore!";
+                form.menu.player.updateHighScore(points);
+            }
+            else
+            {
+                lblNewH.Text = "Good job!";
+            }
+            form.menu.UpdateLabel();
+        }
+
+        private void btnMenu_Click(object sender, EventArgs e)
+        {
+            form.menu.Show();//otvori nova forma N ili odnovo cela app 
+            form.Hide();
+            this.Close();
         }
     }
 }
