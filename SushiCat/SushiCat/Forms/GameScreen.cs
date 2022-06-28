@@ -29,7 +29,7 @@ namespace SushiCat
         public GameScreen(GameMenu menu)
         {
             InitializeComponent();
-            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = FormBorderStyle.None;
             this.menu = menu;
             DoubleBuffered = true;
             newCat = menu.player.updatePlayed();
@@ -115,5 +115,14 @@ namespace SushiCat
             this.cat.timer.Enabled = false;
         }
 
+        private void goBack_MouseEnter(object sender, EventArgs e)
+        {
+            goBack.BackColor = Color.LightBlue;
+        }
+
+        private void goBack_MouseLeave(object sender, EventArgs e)
+        {
+            goBack.BackColor = Color.LightPink;
+        }
     }
 }

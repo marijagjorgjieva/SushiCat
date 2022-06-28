@@ -27,6 +27,7 @@ namespace SushiCat
             grayUnlocked = (bool)Settings.Default["GrayUnlocked"];
             pinkUnlocked = (bool)Settings.Default["PinkUnlocked"];
             yellowUnlocked = (bool)Settings.Default["YellowUnlocked"];
+            menu.DisableMenu();
             UpdateColors();
             UpdateLabel(selected);
         }
@@ -263,5 +264,13 @@ namespace SushiCat
         {
             UpdateLabel(selected);
         }
+
+        private void Customize_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            menu.player.ChangeImages();
+            menu.EnableMenu();
+            
+        }
+        
     }
 }

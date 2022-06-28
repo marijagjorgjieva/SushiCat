@@ -15,7 +15,7 @@ namespace SushiCat
     {
         private GameScreen form;
         private GameMenu menu;
-        private static SoundPlayer sound = new SoundPlayer(Properties.Resources.game_over);
+        private static SoundPlayer sound = new SoundPlayer(Properties.Resources.GameOver);
         public GameOverScreen(GameScreen form, GameMenu menu)
         {
             InitializeComponent();

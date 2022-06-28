@@ -10,7 +10,7 @@ namespace SushiCat
 {
     public class Maze
     {
-        private static Image myImage = Properties.Resources.h;
+        private static Image myImage = Properties.Resources.BrickTile;
         private static TextureBrush brush = new TextureBrush(myImage);
         private Graphics g;
         private List<Rectangle> Obstacles { get; set; }

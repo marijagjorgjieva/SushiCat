@@ -63,9 +63,9 @@ namespace SushiCat.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Artbovfard_36 {
+        public static System.Drawing.Bitmap BlankHeart {
             get {
-                object obj = ResourceManager.GetObject("Artbovfard_36", resourceCulture);
+                object obj = ResourceManager.GetObject("BlankHeart", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace SushiCat.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap blankHeart {
+        public static System.Drawing.Bitmap BrickTile {
             get {
-                object obj = ResourceManager.GetObject("blankHeart", resourceCulture);
+                object obj = ResourceManager.GetObject("BrickTile", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,56 +83,9 @@ namespace SushiCat.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream bump {
+        public static System.IO.UnmanagedMemoryStream Coin {
             get {
-                return ResourceManager.GetStream("bump", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        public static System.IO.UnmanagedMemoryStream bumpp {
-            get {
-                return ResourceManager.GetStream("bumpp", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap Cat {
-            get {
-                object obj = ResourceManager.GetObject("Cat", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap cc {
-            get {
-                object obj = ResourceManager.GetObject("cc", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        public static System.IO.UnmanagedMemoryStream coin2 {
-            get {
-                return ResourceManager.GetStream("coin2", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        public static System.IO.UnmanagedMemoryStream coinchime {
-            get {
-                return ResourceManager.GetStream("coinchime", resourceCulture);
+                return ResourceManager.GetStream("Coin", resourceCulture);
             }
         }
         
@@ -149,9 +102,9 @@ namespace SushiCat.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap evilBlob {
+        public static System.Drawing.Bitmap EvilBlob {
             get {
-                object obj = ResourceManager.GetObject("evilBlob", resourceCulture);
+                object obj = ResourceManager.GetObject("EvilBlob", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -159,9 +112,9 @@ namespace SushiCat.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap fullHeart {
+        public static System.Drawing.Bitmap FullHeart {
             get {
-                object obj = ResourceManager.GetObject("fullHeart", resourceCulture);
+                object obj = ResourceManager.GetObject("FullHeart", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -179,37 +132,18 @@ namespace SushiCat.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream game_over {
+        public static System.IO.UnmanagedMemoryStream GameOver {
             get {
-                return ResourceManager.GetStream("game_over", resourceCulture);
+                return ResourceManager.GetStream("GameOver", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream gameAudio {
+        public static System.IO.UnmanagedMemoryStream GhostEncounter {
             get {
-                return ResourceManager.GetStream("gameAudio", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        public static System.IO.UnmanagedMemoryStream gg {
-            get {
-                return ResourceManager.GetStream("gg", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap Granite_staggered_405x420mm_Architextures {
-            get {
-                object obj = ResourceManager.GetObject("Granite_staggered_405x420mm_Architextures", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ResourceManager.GetStream("GhostEncounter", resourceCulture);
             }
         }
         
@@ -254,32 +188,12 @@ namespace SushiCat.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap h {
-            get {
-                object obj = ResourceManager.GetObject("h", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
         public static System.Drawing.Icon icon {
             get {
                 object obj = ResourceManager.GetObject("icon", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap image {
-            get {
-                object obj = ResourceManager.GetObject("image", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -296,9 +210,9 @@ namespace SushiCat.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap logo {
+        public static System.Drawing.Bitmap Logo {
             get {
-                object obj = ResourceManager.GetObject("logo", resourceCulture);
+                object obj = ResourceManager.GetObject("Logo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -366,9 +280,9 @@ namespace SushiCat.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream startMusic1 {
+        public static System.IO.UnmanagedMemoryStream Start {
             get {
-                return ResourceManager.GetStream("startMusic1", resourceCulture);
+                return ResourceManager.GetStream("Start", resourceCulture);
             }
         }
         
@@ -385,29 +299,9 @@ namespace SushiCat.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap sushi {
+        public static System.Drawing.Bitmap Sushi {
             get {
-                object obj = ResourceManager.GetObject("sushi", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap t {
-            get {
-                object obj = ResourceManager.GetObject("t", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap txture {
-            get {
-                object obj = ResourceManager.GetObject("txture", resourceCulture);
+                object obj = ResourceManager.GetObject("Sushi", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -425,19 +319,9 @@ namespace SushiCat.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream win2 {
+        public static System.IO.UnmanagedMemoryStream Win {
             get {
-                return ResourceManager.GetStream("win2", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap winGif {
-            get {
-                object obj = ResourceManager.GetObject("winGif", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ResourceManager.GetStream("Win", resourceCulture);
             }
         }
         

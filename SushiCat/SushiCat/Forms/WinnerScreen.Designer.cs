@@ -87,7 +87,7 @@
             // lblNewH
             // 
             this.lblNewH.AutoSize = true;
-            this.lblNewH.BackColor = System.Drawing.Color.Transparent;
+            this.lblNewH.BackColor = System.Drawing.Color.White;
             this.lblNewH.Font = new System.Drawing.Font("Balthazar", 15.9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNewH.ForeColor = System.Drawing.Color.Gold;
             this.lblNewH.Location = new System.Drawing.Point(184, 143);

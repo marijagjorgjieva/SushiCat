@@ -57,48 +57,48 @@
     <Compile Include="Classes\Maze.cs" />
     <Compile Include="Classes\Player.cs" />
     <Compile Include="Classes\Sushi.cs" />
-    <Compile Include="Customize.cs">
+    <Compile Include="Forms\Customize.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Customize.Designer.cs">
+    <Compile Include="Forms\Customize.Designer.cs">
       <DependentUpon>Customize.cs</DependentUpon>
     </Compile>
-    <Compile Include="GameOverScreen.cs">
+    <Compile Include="Forms\GameOverScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GameOverScreen.Designer.cs">
+    <Compile Include="Forms\GameOverScreen.Designer.cs">
       <DependentUpon>GameOverScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="GameMenu.cs">
+    <Compile Include="Forms\GameMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GameMenu.Designer.cs">
+    <Compile Include="Forms\GameMenu.Designer.cs">
       <DependentUpon>GameMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="GameScreen.cs">
+    <Compile Include="Forms\GameScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GameScreen.Designer.cs">
+    <Compile Include="Forms\GameScreen.Designer.cs">
       <DependentUpon>GameScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WinnerScreen.cs">
+    <Compile Include="Forms\WinnerScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WinnerScreen.Designer.cs">
+    <Compile Include="Forms\WinnerScreen.Designer.cs">
       <DependentUpon>WinnerScreen.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Customize.resx">
+    <EmbeddedResource Include="Forms\Customize.resx">
       <DependentUpon>Customize.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GameOverScreen.resx">
+    <EmbeddedResource Include="Forms\GameOverScreen.resx">
       <DependentUpon>GameOverScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GameMenu.resx">
+    <EmbeddedResource Include="Forms\GameMenu.resx">
       <DependentUpon>GameMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GameScreen.resx">
+    <EmbeddedResource Include="Forms\GameScreen.resx">
       <DependentUpon>GameScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -106,7 +106,7 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="WinnerScreen.resx">
+    <EmbeddedResource Include="Forms\WinnerScreen.resx">
       <DependentUpon>WinnerScreen.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -271,10 +271,14 @@
     <None Include="Resources\cc.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Artbovfard 36.png" />
+    <None Include="Resources\Win.wav" />
+    <None Include="Resources\Start.wav" />
+    <None Include="Resources\GhostEncounter.wav" />
+    <None Include="Resources\GameOver.wav" />
+    <Content Include="Resources\Logo.jpeg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\h.jpg" />
+    <Content Include="Resources\BrickTile.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

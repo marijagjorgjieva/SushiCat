@@ -15,14 +15,14 @@ namespace SushiCat
     public partial class GameMenu : Form
     {
         public Player player;
-        private SoundPlayer sound = new SoundPlayer(Properties.Resources.startMusic1);
+        private SoundPlayer sound = new SoundPlayer(Properties.Resources.Start);
         private GameScreen gameScreen;
         private Customize customize;
         public GameMenu()
         {
             InitializeComponent();
             //disable resizing
-            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = FormBorderStyle.None;
             sound.PlayLooping();
             player = new Player();
             UpdateLabel();
@@ -34,7 +34,6 @@ namespace SushiCat
         }
         public void createGame()
         {
-            player.ChangeImages();
             sound.Stop();
             gameScreen = new GameScreen(this);
             gameScreen.Show();
@@ -61,6 +60,18 @@ namespace SushiCat
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+        public void DisableMenu()
+        {
+            btnExit.Enabled = false;
+            btnPlay.Enabled = false;
+            btnPlayer.Enabled = false;
+        }
+        public void EnableMenu()
+        {
+            btnExit.Enabled = true;
+            btnPlay.Enabled = true;
+            btnPlayer.Enabled = true;
         }
     }
 }

@@ -71,7 +71,7 @@ namespace SushiCat
 
         public void SetImage()
         { 
-            BlobImage.Image = Properties.Resources.evilBlob;
+            BlobImage.Image = Properties.Resources.EvilBlob;
             currentDirection = 1;
             xCoordinate = 360 / 40;
             yCoordinate = 480 / 40;

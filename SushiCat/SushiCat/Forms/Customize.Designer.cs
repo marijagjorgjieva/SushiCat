@@ -220,6 +220,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Customize";
             this.TopMost = true;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Customize_FormClosed);
             this.Click += new System.EventHandler(this.Customize_Click);
             ((System.ComponentModel.ISupportInitialize)(this.black)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gray)).EndInit();

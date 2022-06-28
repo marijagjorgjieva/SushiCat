@@ -122,9 +122,8 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnPlay;
         public System.Windows.Forms.Label label;
+        private System.Windows.Forms.Button btnPlay;
         private System.Windows.Forms.Button btnPlayer;
         private System.Windows.Forms.Button btnExit;
     }

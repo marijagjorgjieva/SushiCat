@@ -9,7 +9,7 @@ namespace SushiCat
     {
         private GameScreen formInstance;
         private PictureBox[,] sushi = new PictureBox[20, 20];
-        private static SoundPlayer Player = new SoundPlayer(Properties.Resources.coin2);
+        private static SoundPlayer Player = new SoundPlayer(Properties.Resources.Coin);
         private int CollectedSushi = 0;
         private int maxSushiCounter = 0;
         public Sushi(GameScreen formInstance)
@@ -30,7 +30,7 @@ namespace SushiCat
                     if (formInstance.maze.Matrix[i, j] == 0)
                     {
                        sushi[i,j]=new PictureBox();
-                       sushi[i,j].Image = Properties.Resources.sushi;
+                       sushi[i,j].Image = Properties.Resources.Sushi;
                        sushi[i, j].Size = new Size(40, 40);
                        sushi[i, j].SizeMode = PictureBoxSizeMode.CenterImage;
                        sushi[i, j].Location = new Point(startX, startY);

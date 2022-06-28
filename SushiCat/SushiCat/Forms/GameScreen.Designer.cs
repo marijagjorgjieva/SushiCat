@@ -46,6 +46,8 @@
             this.goBack.TabIndex = 0;
             this.goBack.Text = "Exit";
             this.goBack.Click += new System.EventHandler(this.GoBackClick);
+            this.goBack.MouseEnter += new System.EventHandler(this.goBack_MouseEnter);
+            this.goBack.MouseLeave += new System.EventHandler(this.goBack_MouseLeave);
             // 
             // GameScreen
             // 
