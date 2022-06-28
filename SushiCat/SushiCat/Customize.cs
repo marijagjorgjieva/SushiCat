@@ -35,7 +35,7 @@ namespace SushiCat
         {
             if (index == 1)
             {
-                catInfo.Text = "Unlocked\nDefault Blacks Cat";
+                catInfo.Text = "Unlocked\nDefault Black Cat";
                 catInfo.ForeColor = Color.Green;
             }
             if (index == 2)

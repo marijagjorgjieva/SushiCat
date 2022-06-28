@@ -42,7 +42,7 @@ namespace SushiCat
                 livesImages[i].Size = new Size(30, 30);
                 formInstance.Controls.Add(livesImages[i]);
                 livesImages[i].SizeMode = PictureBoxSizeMode.StretchImage;
-                livesImages[i].BackgroundImage = Properties.Resources.image;
+                livesImages[i].BackgroundImage = Properties.Resources.h;
                 livesImages[i].BringToFront();
                 xPos += 30;
             }
@@ -52,12 +52,12 @@ namespace SushiCat
         private void MakeLogo()
         {
             PictureBox logo = new PictureBox();
-            logo.Image = Properties.Resources.logo;
+            logo.Image = Properties.Resources.Artbovfard_36;
             logo.Location = new Point(240, 360);
             logo.Size = new Size(320, 80);
             formInstance.Controls.Add(logo);
             logo.SizeMode = PictureBoxSizeMode.CenterImage;
-            logo.BackgroundImage = Properties.Resources.image;
+            logo.BackgroundImage = Properties.Resources.h;
             logo.BringToFront();
         }
 

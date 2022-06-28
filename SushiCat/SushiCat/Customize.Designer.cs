@@ -50,7 +50,7 @@
             // 
             this.tbChangeName.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbChangeName.ForeColor = System.Drawing.Color.IndianRed;
-            this.tbChangeName.Location = new System.Drawing.Point(74, 96);
+            this.tbChangeName.Location = new System.Drawing.Point(74, 86);
             this.tbChangeName.Name = "tbChangeName";
             this.tbChangeName.Size = new System.Drawing.Size(107, 56);
             this.tbChangeName.TabIndex = 0;
@@ -61,7 +61,7 @@
             this.lblName.BackColor = System.Drawing.Color.MistyRose;
             this.lblName.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 14.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.ForeColor = System.Drawing.Color.IndianRed;
-            this.lblName.Location = new System.Drawing.Point(74, 68);
+            this.lblName.Location = new System.Drawing.Point(74, 58);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(263, 57);
             this.lblName.TabIndex = 1;
@@ -77,7 +77,7 @@
             this.btnChangeName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChangeName.Font = new System.Drawing.Font("Bahnschrift", 14.1F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChangeName.ForeColor = System.Drawing.Color.White;
-            this.btnChangeName.Location = new System.Drawing.Point(203, 70);
+            this.btnChangeName.Location = new System.Drawing.Point(203, 60);
             this.btnChangeName.Name = "btnChangeName";
             this.btnChangeName.Size = new System.Drawing.Size(100, 50);
             this.btnChangeName.TabIndex = 3;
@@ -106,7 +106,7 @@
             this.black.BackColor = System.Drawing.Color.GreenYellow;
             this.black.Cursor = System.Windows.Forms.Cursors.Hand;
             this.black.Image = global::SushiCat.Properties.Resources.Right;
-            this.black.Location = new System.Drawing.Point(74, 202);
+            this.black.Location = new System.Drawing.Point(74, 192);
             this.black.Name = "black";
             this.black.Size = new System.Drawing.Size(40, 40);
             this.black.TabIndex = 4;
@@ -121,7 +121,7 @@
             this.label1.BackColor = System.Drawing.Color.MistyRose;
             this.label1.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 14.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.IndianRed;
-            this.label1.Location = new System.Drawing.Point(74, 165);
+            this.label1.Location = new System.Drawing.Point(74, 155);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(236, 57);
             this.label1.TabIndex = 1;
@@ -137,7 +137,7 @@
             this.btnChangeCat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChangeCat.Font = new System.Drawing.Font("Bahnschrift", 14.1F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChangeCat.ForeColor = System.Drawing.Color.White;
-            this.btnChangeCat.Location = new System.Drawing.Point(203, 166);
+            this.btnChangeCat.Location = new System.Drawing.Point(203, 156);
             this.btnChangeCat.Name = "btnChangeCat";
             this.btnChangeCat.Size = new System.Drawing.Size(100, 50);
             this.btnChangeCat.TabIndex = 3;
@@ -149,7 +149,7 @@
             // 
             this.gray.Cursor = System.Windows.Forms.Cursors.Hand;
             this.gray.Image = global::SushiCat.Properties.Resources.GrayRight;
-            this.gray.Location = new System.Drawing.Point(129, 202);
+            this.gray.Location = new System.Drawing.Point(129, 192);
             this.gray.Name = "gray";
             this.gray.Size = new System.Drawing.Size(40, 40);
             this.gray.TabIndex = 4;
@@ -162,7 +162,7 @@
             // 
             this.pink.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pink.Image = global::SushiCat.Properties.Resources.PinkRight;
-            this.pink.Location = new System.Drawing.Point(74, 245);
+            this.pink.Location = new System.Drawing.Point(74, 235);
             this.pink.Name = "pink";
             this.pink.Size = new System.Drawing.Size(40, 40);
             this.pink.TabIndex = 4;
@@ -175,7 +175,7 @@
             // 
             this.yellow.Cursor = System.Windows.Forms.Cursors.Hand;
             this.yellow.Image = global::SushiCat.Properties.Resources.YellowRight;
-            this.yellow.Location = new System.Drawing.Point(129, 245);
+            this.yellow.Location = new System.Drawing.Point(129, 235);
             this.yellow.Name = "yellow";
             this.yellow.Size = new System.Drawing.Size(40, 40);
             this.yellow.TabIndex = 4;
@@ -190,7 +190,7 @@
             this.catInfo.BackColor = System.Drawing.Color.MistyRose;
             this.catInfo.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.catInfo.ForeColor = System.Drawing.Color.YellowGreen;
-            this.catInfo.Location = new System.Drawing.Point(203, 228);
+            this.catInfo.Location = new System.Drawing.Point(203, 218);
             this.catInfo.Name = "catInfo";
             this.catInfo.Size = new System.Drawing.Size(227, 144);
             this.catInfo.TabIndex = 1;

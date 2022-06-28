@@ -63,6 +63,16 @@ namespace SushiCat.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap Artbovfard_36 {
+            get {
+                object obj = ResourceManager.GetObject("Artbovfard_36", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap blankHeart {
             get {
                 object obj = ResourceManager.GetObject("blankHeart", resourceCulture);
@@ -94,6 +104,16 @@ namespace SushiCat.Properties {
         public static System.Drawing.Bitmap Cat {
             get {
                 object obj = ResourceManager.GetObject("Cat", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap cc {
+            get {
+                object obj = ResourceManager.GetObject("cc", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -234,6 +254,16 @@ namespace SushiCat.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap h {
+            get {
+                object obj = ResourceManager.GetObject("h", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
         public static System.Drawing.Icon icon {
@@ -358,6 +388,26 @@ namespace SushiCat.Properties {
         public static System.Drawing.Bitmap sushi {
             get {
                 object obj = ResourceManager.GetObject("sushi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap t {
+            get {
+                object obj = ResourceManager.GetObject("t", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap txture {
+            get {
+                object obj = ResourceManager.GetObject("txture", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

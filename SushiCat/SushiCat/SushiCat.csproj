@@ -261,5 +261,20 @@
   <ItemGroup>
     <None Include="Resources\YellowUp.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\txture.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cc.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Artbovfard 36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\h.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
