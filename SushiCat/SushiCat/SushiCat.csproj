@@ -222,5 +222,44 @@
   <ItemGroup>
     <None Include="Resources\winGif.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\win2.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GrayDown.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GrayLeft.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GrayRight.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GrayUp.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PinkDown.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PinkLeft.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PinkRight.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PinkUp.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\YellowDown.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\YellowLeft.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\YellowRight.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\YellowUp.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

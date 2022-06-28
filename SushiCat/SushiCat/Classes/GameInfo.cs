@@ -17,32 +17,28 @@ namespace SushiCat
         Label gameInfo;
         public int lives { set; get; } = -1;
         private List<PictureBox> livesImages;
-        private static SoundPlayer  sound = new SoundPlayer(Properties.Resources.bumpp);
-        public SoundPlayer gameOver;
+        private static SoundPlayer sound = new SoundPlayer(Properties.Resources.bumpp);
         public GameInfo(GameScreen screen)
         {
             gameInfo = new Label();
-            gameOver = new SoundPlayer(Properties.Resources.game_over);
             this.formInstance = screen;
             MakeLabel();
             MakeLogo();
-            MakeLives();
-           
-
-           
+            MakeLives();        
         }
 
+        //create the hearts images
         private void MakeLives()
         {
-            livesImages= new List<PictureBox>();
+            livesImages = new List<PictureBox>();
             livesImages.Add(new PictureBox());
             livesImages.Add(new PictureBox());
             livesImages.Add(new PictureBox());
-            int xPos = 800-30*3;
-            for(int i = 0;i < 3;i++)
+            int xPos = 800 - 30 * 3;
+            for (int i = 0; i < 3; i++)
             {
                 livesImages[i].Image = Properties.Resources.fullHeart;
-                livesImages[i].Location = new Point(xPos,2);
+                livesImages[i].Location = new Point(xPos, 2);
                 livesImages[i].Size = new Size(30, 30);
                 formInstance.Controls.Add(livesImages[i]);
                 livesImages[i].SizeMode = PictureBoxSizeMode.StretchImage;
@@ -51,10 +47,10 @@ namespace SushiCat
                 xPos += 30;
             }
         }
+
+        //placing the logo in the center of the maze
         private void MakeLogo()
         {
-            //----------vo dr klasa
-            //logo  da odi vo dr klasa
             PictureBox logo = new PictureBox();
             logo.Image = Properties.Resources.logo;
             logo.Location = new Point(240, 360);
@@ -63,12 +59,12 @@ namespace SushiCat
             logo.SizeMode = PictureBoxSizeMode.CenterImage;
             logo.BackgroundImage = Properties.Resources.image;
             logo.BringToFront();
-            
-
         }
+
+        //creating game info label
         private void MakeLabel()
         {
-            gameInfo.Text = String.Format("Player:{0}   Points:{1}", formInstance.menu.player.PlayerName, Points);
+            gameInfo.Text = String.Format("Player:{0}   Points:{1}", formInstance.menu.player.playerName, Points);
             gameInfo.Location = new Point(0, 2);
             gameInfo.Font = new Font("Bahnschrift", 12, FontStyle.Bold);
             gameInfo.TextAlign = ContentAlignment.MiddleCenter;
@@ -81,17 +77,19 @@ namespace SushiCat
             gameInfo.BorderStyle = BorderStyle.Fixed3D;
             gameInfo.BringToFront();
         }
+
+        //updating label with the new info
         public void UpdateLabel()
         {
-            gameInfo.Text = String.Format("Player: {0}   Points: {1}", formInstance.menu.player.PlayerName, formInstance.gameInfo.Points);
+            gameInfo.Text = String.Format("Player: {0}   Points: {1}", formInstance.menu.player.playerName, formInstance.gameInfo.Points);
         }
 
-        public void RemoveLives()
+        //check if any lives left, replace full heart with blank for a life lost
+        public void LivesCheck()
         {
             
             if (lives == 2)
             {
-                gameOver.Play();
                 formInstance.GameOver();
             }
             else

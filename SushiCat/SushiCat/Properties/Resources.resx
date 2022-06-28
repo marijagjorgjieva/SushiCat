@@ -160,6 +160,18 @@
   <data name="Granite_staggered_405x420mm_Architextures" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Granite-staggered-405x420mm-Architextures.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="GrayDown" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GrayDown.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GrayLeft" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GrayLeft.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GrayRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GrayRight.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GrayUp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GrayUp.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -174,6 +186,18 @@
   </data>
   <data name="OtherScreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\OtherScreen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PinkDown" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PinkDown.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PinkLeft" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PinkLeft.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PinkRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PinkRight.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PinkUp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PinkUp.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Right" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Right.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -190,7 +214,22 @@
   <data name="Up" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Up.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="win2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\win2.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="winGif" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\winGif.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="YellowDown" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\YellowDown.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="YellowLeft" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\YellowLeft.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="YellowRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\YellowRight.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="YellowUp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\YellowUp.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

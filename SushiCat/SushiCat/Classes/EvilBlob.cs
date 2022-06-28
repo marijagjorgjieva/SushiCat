@@ -38,7 +38,7 @@ namespace SushiCat
             timer.Enabled = true;
             waittimer.Enabled= false;
         }
-
+        //ova da se napravi poarno
         private void hometimer_Tick(object sender, EventArgs e)
         {
             int xpos = 360;
@@ -70,8 +70,7 @@ namespace SushiCat
         }
 
         public void SetImage()
-        {
-            //place cat image on board
+        { 
             BlobImage.Image = Properties.Resources.evilBlob;
             currentDirection = 1;
             xCoordinate = 360 / 40;
@@ -236,6 +235,8 @@ namespace SushiCat
                 return false;
 
         }
+
+        //dali da odi gore vo gameScreen?
         public void CheckForCollision()
         {
             if (xCoordinate == formInstance.cat.xCoordinate && yCoordinate == formInstance.cat.yCoordinate)
@@ -252,7 +253,7 @@ namespace SushiCat
                     hometimer.Enabled = true;
                     formInstance.cat.timer.Enabled = false;
                 }
-                formInstance.gameInfo.RemoveLives();
+                formInstance.gameInfo.LivesCheck();
                 formInstance.maze.SetUpMaze();
             }
 

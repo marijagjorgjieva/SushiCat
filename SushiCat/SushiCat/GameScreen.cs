@@ -25,14 +25,14 @@ namespace SushiCat
         //win and game over forms
         private GameOverScreen gameOver;
         private WinnerScreen gameWin;
-
+        public int newCat;
         public GameScreen(GameMenu menu)
         {
             InitializeComponent();
-            this.KeyPreview = true;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.menu = menu;
             DoubleBuffered = true;
+            newCat = menu.player.updatePlayed();
 
             //these are used for maze loading
             g = this.CreateGraphics();//od sega
@@ -49,8 +49,6 @@ namespace SushiCat
             {
                 maze.SetUpMaze();
                 loadedMaze = true;
-               
-
             }
         }
 
@@ -83,22 +81,18 @@ namespace SushiCat
             }
         }
 
-        // form closed event
-        private void GameScreen_FormClosed(object sender, FormClosedEventArgs e)
-        {
-           // Application.Exit();
-        }
-
         //game over form load
         public void GameOver()
         {
             gameOver =new GameOverScreen(this,menu);
-            gameOver.Show();            
+            gameOver.Show();  
         }
 
         //win game form load
         public void WinGame()
         {
+            if(newCat==0)
+                newCat = menu.player.updateWinned();
             gameWin = new WinnerScreen(this,menu);
             gameWin.Show();
             StopGame();
@@ -110,11 +104,11 @@ namespace SushiCat
             gameOver=new GameOverScreen(this,menu);
             gameOver.Show();
             StopGame();
-            gameInfo.gameOver.Play();
            
         }
         public void StopGame()
         {
+            goBack.Enabled = false;
             this.evilBlob.timer.Enabled = false;
             this.evilBlob.hometimer.Enabled = false;
             this.evilBlob.waittimer.Enabled = false;

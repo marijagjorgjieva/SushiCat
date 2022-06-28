@@ -52,6 +52,7 @@
             this.btnPlayAgain.TabIndex = 6;
             this.btnPlayAgain.Text = "Play again";
             this.btnPlayAgain.UseVisualStyleBackColor = false;
+            this.btnPlayAgain.Click += new System.EventHandler(this.btnPlayAgain_Click);
             // 
             // btnMenu
             // 
@@ -89,7 +90,7 @@
             this.lblNewH.BackColor = System.Drawing.Color.Transparent;
             this.lblNewH.Font = new System.Drawing.Font("Balthazar", 15.9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNewH.ForeColor = System.Drawing.Color.Gold;
-            this.lblNewH.Location = new System.Drawing.Point(184, 148);
+            this.lblNewH.Location = new System.Drawing.Point(184, 143);
             this.lblNewH.Name = "lblNewH";
             this.lblNewH.Size = new System.Drawing.Size(329, 63);
             this.lblNewH.TabIndex = 3;

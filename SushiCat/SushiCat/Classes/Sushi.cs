@@ -7,10 +7,10 @@ namespace SushiCat
 {
     public class Sushi
     {
+        private GameScreen formInstance;
         private PictureBox[,] sushi = new PictureBox[20, 20];
         private static SoundPlayer Player = new SoundPlayer(Properties.Resources.coin2);
         private int CollectedSushi = 0;
-        private GameScreen formInstance;
         private int maxSushiCounter = 0;
         public Sushi(GameScreen formInstance)
         {
@@ -18,6 +18,7 @@ namespace SushiCat
             this.formInstance = formInstance;
         }
 
+        //placing the sushi on board
         public void CreateSushi()
         {
             int startX = 0;
@@ -48,6 +49,7 @@ namespace SushiCat
 
         public void EatFood(int x, int y)
         {
+            //eat food
             if (formInstance.maze.Matrix[y, x] == 0)
             { 
                     Player.Play();
@@ -57,13 +59,15 @@ namespace SushiCat
                     CollectedSushi += 1;
                     formInstance.gameInfo.Points = CollectedSushi;
             }
-            GC.Collect();
-            GC.WaitForPendingFinalizers();
+         
+            //game win
             if(CollectedSushi==maxSushiCounter)
             {
                 formInstance.WinGame();
             }
 
+            GC.Collect();
+            GC.WaitForPendingFinalizers();
         }
 
         

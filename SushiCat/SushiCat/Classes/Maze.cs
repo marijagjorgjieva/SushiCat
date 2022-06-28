@@ -44,6 +44,8 @@ namespace SushiCat
             this.g = g;
         }
         
+
+        //drawing mazr
         public void SetUpMaze()
         {
             brush.WrapMode = System.Drawing.Drawing2D.WrapMode.Tile;
@@ -65,7 +67,6 @@ namespace SushiCat
             }
             g.FillRectangles(brush, Obstacles.ToArray());
 
-          ////  brush.Dispose();
         }
 
        

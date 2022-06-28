@@ -32,6 +32,7 @@
             this.btnPlay = new System.Windows.Forms.Button();
             this.label = new System.Windows.Forms.Label();
             this.btnPlayer = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnPlay
@@ -83,12 +84,31 @@
             this.btnPlayer.UseVisualStyleBackColor = false;
             this.btnPlayer.Click += new System.EventHandler(this.btnCustomize);
             // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.LightPink;
+            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExit.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightBlue;
+            this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleVioletRed;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("Bahnschrift", 21.9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.Location = new System.Drawing.Point(277, 686);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(195, 50);
+            this.btnExit.TabIndex = 0;
+            this.btnExit.Text = "Exit Game";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // GameMenu
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = global::SushiCat.Properties.Resources.StartScreen;
             this.ClientSize = new System.Drawing.Size(800, 800);
             this.Controls.Add(this.label);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnPlayer);
             this.Controls.Add(this.btnPlay);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -106,5 +126,6 @@
         private System.Windows.Forms.Button btnPlay;
         public System.Windows.Forms.Label label;
         private System.Windows.Forms.Button btnPlayer;
+        private System.Windows.Forms.Button btnExit;
     }
 }

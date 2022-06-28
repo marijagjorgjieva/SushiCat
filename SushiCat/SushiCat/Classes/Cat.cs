@@ -26,7 +26,7 @@ namespace SushiCat
 
         public void SetImage()
         {
-            CatImage.Image = Properties.Resources.Right;
+            CatImage.Image = formInstance.menu.player.right;
             currentDirection = 0;
             xCoordinate = 360/40;
             yCoordinate = 280/40;
@@ -94,10 +94,10 @@ namespace SushiCat
         {
             switch (currentDirection)
             {
-                case 1: CatImage.Image = Properties.Resources.Up; break;
-                case 2: CatImage.Image = Properties.Resources.Right; break;
-                case 3: CatImage.Image = Properties.Resources.Down; break;
-                case 4: CatImage.Image = Properties.Resources.Left; break;
+                case 1: CatImage.Image = formInstance.menu.player.up; break;
+                case 2: CatImage.Image = formInstance.menu.player.right; break;
+                case 3: CatImage.Image = formInstance.menu.player.down; break;
+                case 4: CatImage.Image = formInstance.menu.player.left; break;
             }
         }
        

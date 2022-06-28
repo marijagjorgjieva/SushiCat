@@ -46,5 +46,77 @@ namespace SushiCat.Properties {
                 this["MaxScore"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1")]
+        public int CatIndex {
+            get {
+                return ((int)(this["CatIndex"]));
+            }
+            set {
+                this["CatIndex"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int PlayedGames {
+            get {
+                return ((int)(this["PlayedGames"]));
+            }
+            set {
+                this["PlayedGames"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int WinnedGames {
+            get {
+                return ((int)(this["WinnedGames"]));
+            }
+            set {
+                this["WinnedGames"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool GrayUnlocked {
+            get {
+                return ((bool)(this["GrayUnlocked"]));
+            }
+            set {
+                this["GrayUnlocked"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool PinkUnlocked {
+            get {
+                return ((bool)(this["PinkUnlocked"]));
+            }
+            set {
+                this["PinkUnlocked"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool YellowUnlocked {
+            get {
+                return ((bool)(this["YellowUnlocked"]));
+            }
+            set {
+                this["YellowUnlocked"] = value;
+            }
+        }
     }
 }

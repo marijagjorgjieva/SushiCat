@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,22 +15,43 @@ namespace SushiCat
     {
         private GameScreen form;
         private GameMenu menu;
+        private static SoundPlayer sound = new SoundPlayer(Properties.Resources.game_over);
         public GameOverScreen(GameScreen form, GameMenu menu)
         {
             InitializeComponent();
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            sound.Play();
+            this.FormBorderStyle = FormBorderStyle.None;
             this.menu = menu;
             this.form = form;
+            UpdateInfo();
+        }
+
+        private void UpdateInfo()
+        {
             int points = form.gameInfo.Points;
             lblScore.Text = String.Format("Score: {0}", points.ToString());
             if (form.menu.player.isHighScore(points))
             {
-                lblNewH.Text = "New Highscore!";
                 form.menu.player.updateHighScore(points);
+                if (form.newCat!=0)
+                {
+                    lblNewH.Text = "New Highscore!\nNew cat unlocked!";
+                }
+                else
+                {
+                    lblNewH.Text = "New Highscore!";
+                }
             }
             else
             {
-                lblNewH.Text = "Good job!";
+                if (form.newCat != 0)
+                {
+                    lblNewH.Text = "Good job!\nNew cat unlocked!";
+                }
+                else
+                { 
+                    lblNewH.Text = "Good job!";
+                }
             }
             form.menu.UpdateLabel();
         }
