@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace SushiCat.Classes
-{
+{ 
     public class Player
     {
         
@@ -62,22 +62,22 @@ namespace SushiCat.Classes
             }
         }
 
-        public void updateHighScore(int score)
+        public void UpdateHighscore(int score)
         {
-            if(isHighScore(score))
+            if(IsHighscore(score))
                 highscore = score;
             Settings.Default["MaxScore"]=highscore;
             Settings.Default.Save();
 
         }
 
-        public bool isHighScore(int score)
+        public bool IsHighscore(int score)
         {
             if (highscore < score)
                 return true;
             else return false;
         }
-        public int updatePlayed()
+        public int UpdatePlayed()
         {
             bool pink = (bool)Settings.Default["PinkUnlocked"];
             playedGames++;
@@ -91,7 +91,7 @@ namespace SushiCat.Classes
             }
            return 0;
         }
-        public int updateWinned()
+        public int UpdateWinned()
         {
             bool gray =(bool) Settings.Default["GrayUnlocked"];
             bool yellow = (bool)Settings.Default["YellowUnlocked"];

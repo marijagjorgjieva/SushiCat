@@ -33,6 +33,7 @@
             this.label = new System.Windows.Forms.Label();
             this.btnPlayer = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.lblHelp = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnPlay
@@ -102,11 +103,28 @@
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // lblHelp
+            // 
+            this.lblHelp.AutoSize = true;
+            this.lblHelp.BackColor = System.Drawing.Color.LightPink;
+            this.lblHelp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblHelp.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 14.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHelp.ForeColor = System.Drawing.Color.White;
+            this.lblHelp.Location = new System.Drawing.Point(2, 774);
+            this.lblHelp.Name = "lblHelp";
+            this.lblHelp.Size = new System.Drawing.Size(44, 57);
+            this.lblHelp.TabIndex = 6;
+            this.lblHelp.Text = "?";
+            this.lblHelp.Click += new System.EventHandler(this.lblHelp_Click);
+            this.lblHelp.MouseEnter += new System.EventHandler(this.lblHelp_MouseEnter);
+            this.lblHelp.MouseLeave += new System.EventHandler(this.lblHelp_MouseLeave);
+            // 
             // GameMenu
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = global::SushiCat.Properties.Resources.StartScreen;
             this.ClientSize = new System.Drawing.Size(800, 800);
+            this.Controls.Add(this.lblHelp);
             this.Controls.Add(this.label);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnPlayer);
@@ -126,5 +144,6 @@
         private System.Windows.Forms.Button btnPlay;
         private System.Windows.Forms.Button btnPlayer;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Label lblHelp;
     }
 }

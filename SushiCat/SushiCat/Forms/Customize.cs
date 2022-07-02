@@ -80,7 +80,7 @@ namespace SushiCat
             }
         }
 
-        private void btnChangeName_Click(object sender, EventArgs e)
+        private void ChangeName(object sender, EventArgs e)
         {
             if(tbChangeName.Text!=null && tbChangeName.Text.Length>0)
             {

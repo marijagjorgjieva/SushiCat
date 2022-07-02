@@ -83,7 +83,7 @@
             this.btnChangeName.TabIndex = 3;
             this.btnChangeName.Text = "Change";
             this.btnChangeName.UseVisualStyleBackColor = false;
-            this.btnChangeName.Click += new System.EventHandler(this.btnChangeName_Click);
+            this.btnChangeName.Click += new System.EventHandler(this.ChangeName);
             // 
             // lblClose
             // 
@@ -217,6 +217,7 @@
             this.MinimizeBox = false;
             this.Name = "Customize";
             this.Opacity = 0.95D;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Customize";
             this.TopMost = true;

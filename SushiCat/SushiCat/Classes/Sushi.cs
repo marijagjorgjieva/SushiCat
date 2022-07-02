@@ -7,18 +7,17 @@ namespace SushiCat
 {
     public class Sushi
     {
-        private GameScreen formInstance;
+        private GameScreen gameScreen;
         private PictureBox[,] sushi = new PictureBox[20, 20];
         private static SoundPlayer Player = new SoundPlayer(Properties.Resources.Coin);
         private int CollectedSushi = 0;
         private int maxSushiCounter = 0;
-        public Sushi(GameScreen formInstance)
+        public Sushi(GameScreen gameScreen)
         {
             Player.Load();
-            this.formInstance = formInstance;
+            this.gameScreen = gameScreen;
         }
 
-        //placing the sushi on board
         public void CreateSushi()
         {
             int startX = 0;
@@ -27,7 +26,7 @@ namespace SushiCat
             {
                 for (int j = 0; j < 20; j++)
                 {
-                    if (formInstance.maze.Matrix[i, j] == 0)
+                    if (gameScreen.maze.Matrix[i, j] == 0)
                     {
                        sushi[i,j]=new PictureBox();
                        sushi[i,j].Image = Properties.Resources.Sushi;
@@ -35,7 +34,7 @@ namespace SushiCat
                        sushi[i, j].SizeMode = PictureBoxSizeMode.CenterImage;
                        sushi[i, j].Location = new Point(startX, startY);
                        sushi[i, j].BackColor = Color.Transparent;
-                       formInstance.Controls.Add(sushi[i, j]);
+                       gameScreen.Controls.Add(sushi[i, j]);
                        sushi[i, j].BringToFront();
                        maxSushiCounter++;
                     }
@@ -49,21 +48,19 @@ namespace SushiCat
 
         public void EatFood(int x, int y)
         {
-            //eat food
-            if (formInstance.maze.Matrix[y, x] == 0)
+            if (gameScreen.maze.Matrix[y, x] == 0)
             { 
                     Player.Play();
                     sushi[y, x].Visible = false;
                     sushi[y, x] = null;
-                    formInstance.maze.Matrix[y, x] = 3;
+                    gameScreen.maze.Matrix[y, x] = 3;
                     CollectedSushi += 1;
-                    formInstance.gameInfo.Points = CollectedSushi;
+                    gameScreen.gameInfo.Points = CollectedSushi;
             }
          
-            //game win
             if(CollectedSushi==maxSushiCounter)
             {
-                formInstance.WinGame();
+                gameScreen.WinGame();
             }
 
             GC.Collect();

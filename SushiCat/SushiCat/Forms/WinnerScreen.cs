@@ -30,7 +30,7 @@ namespace SushiCat
         {
             int points = form.gameInfo.Points;
             lblScore.Text = String.Format("Score: {0}", points.ToString());
-            form.menu.player.updateHighScore(points);
+            form.menu.player.UpdateHighscore(points);
             form.menu.UpdateLabel();
             if (form.newCat!=0)
             {

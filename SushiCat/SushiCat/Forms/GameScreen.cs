@@ -32,7 +32,7 @@ namespace SushiCat
             this.FormBorderStyle = FormBorderStyle.None;
             this.menu = menu;
             DoubleBuffered = true;
-            newCat = menu.player.updatePlayed();
+            newCat = menu.player.UpdatePlayed();
 
             //these are used for maze loading
             g = this.CreateGraphics();//od sega
@@ -92,7 +92,7 @@ namespace SushiCat
         public void WinGame()
         {
             if(newCat==0)
-                newCat = menu.player.updateWinned();
+                newCat = menu.player.UpdateWinned();
             gameWin = new WinnerScreen(this,menu);
             gameWin.Show();
             StopGame();
@@ -123,6 +123,28 @@ namespace SushiCat
         private void goBack_MouseLeave(object sender, EventArgs e)
         {
             goBack.BackColor = Color.LightPink;
+        }
+
+        public void CheckForCollision()
+        {
+            if (evilBlob.xCoordinate == cat.xCoordinate && evilBlob.yCoordinate == cat.yCoordinate)
+            {
+
+                gameInfo.lives += 1;
+                if (gameInfo.lives == 2)
+                {
+                    StopGame();
+                }
+                else
+                {
+                    evilBlob.timer.Enabled = false;
+                    evilBlob.hometimer.Enabled = true;
+                    cat.timer.Enabled = false;
+                }
+                gameInfo.LivesCheck();
+                maze.SetUpMaze();
+            }
+
         }
     }
 }

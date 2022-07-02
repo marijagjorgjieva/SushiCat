@@ -45,7 +45,7 @@ namespace SushiCat
         }
         
 
-        //drawing mazr
+        //drawing maze
         public void SetUpMaze()
         {
             brush.WrapMode = System.Drawing.Drawing2D.WrapMode.Tile;

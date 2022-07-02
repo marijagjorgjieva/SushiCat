@@ -1,11 +1,15 @@
 ﻿using SushiCat.Classes;
+using SushiCat.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Media;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -18,10 +22,10 @@ namespace SushiCat
         private SoundPlayer sound = new SoundPlayer(Properties.Resources.Start);
         private GameScreen gameScreen;
         private Customize customize;
+        private HelpScreen helpScreen;
         public GameMenu()
         {
             InitializeComponent();
-            //disable resizing
             this.FormBorderStyle = FormBorderStyle.None;
             sound.PlayLooping();
             player = new Player();
@@ -72,6 +76,22 @@ namespace SushiCat
             btnExit.Enabled = true;
             btnPlay.Enabled = true;
             btnPlayer.Enabled = true;
+        }
+
+        private void lblHelp_MouseEnter(object sender, EventArgs e)
+        {
+            lblHelp.BackColor = Color.LightBlue;
+        }
+
+        private void lblHelp_MouseLeave(object sender, EventArgs e)
+        {
+            lblHelp.BackColor = Color.LightPink;
+        }
+
+        private void lblHelp_Click(object sender, EventArgs e)
+        {
+            helpScreen = new HelpScreen(this);
+            helpScreen.Show();
         }
     }
 }

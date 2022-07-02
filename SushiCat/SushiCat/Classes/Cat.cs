@@ -15,24 +15,24 @@ namespace SushiCat
         public int xCoordinate { set; get; } = 0;
         public int yCoordinate { set; get; } = 0;
         public int currentDirection { set; get; } = 0;
-        private GameScreen formInstance;
-        public Cat(GameScreen formInstance)
+        private GameScreen gameScreen;
+        public Cat(GameScreen gameScreen)
         {
             timer.Interval = 100;
             timer.Enabled = true;
             timer.Tick += new EventHandler(TimerTick);
-            this.formInstance = formInstance;
+            this.gameScreen = gameScreen;
         }
 
         public void SetImage()
         {
-            CatImage.Image = formInstance.menu.player.right;
+            CatImage.Image = gameScreen.menu.player.right;
             currentDirection = 0;
             xCoordinate = 360/40;
             yCoordinate = 280/40;
             CatImage.Location = new Point(360, 280);
             CatImage.Size = new Size(40, 40);
-            formInstance.Controls.Add(CatImage);
+            gameScreen.Controls.Add(CatImage);
             CatImage.Name = "CatImage";
             CatImage.SizeMode = PictureBoxSizeMode.StretchImage;
             CatImage.BackColor = Color.Transparent;
@@ -58,17 +58,17 @@ namespace SushiCat
                     case 4: CatImage.Left -= 40; xCoordinate--; break;
                     
                 }
-                formInstance.sushi.EatFood(xCoordinate, yCoordinate);
-                formInstance.gameInfo.UpdateLabel();
+                gameScreen.sushi.EatFood(xCoordinate, yCoordinate);
+                gameScreen.gameInfo.UpdateLabel();
             }     
         }
 
         private void TimerTick(object sender, EventArgs e)
         {
             MoveCat(currentDirection);
-            formInstance.evilBlob.CheckForCollision();
+            gameScreen.CheckForCollision();
         }
-      
+        
         private bool CheckDirection(int direction)
         {
             int x = xCoordinate;
@@ -84,7 +84,7 @@ namespace SushiCat
             if(x<0 || y < 0 || x>19 || y>19)
                 return false;
 
-            if (formInstance.maze.Matrix[y, x] != 1)
+            if (gameScreen.maze.Matrix[y, x] != 1)
                 return true;
             else
                 return false;
@@ -94,10 +94,10 @@ namespace SushiCat
         {
             switch (currentDirection)
             {
-                case 1: CatImage.Image = formInstance.menu.player.up; break;
-                case 2: CatImage.Image = formInstance.menu.player.right; break;
-                case 3: CatImage.Image = formInstance.menu.player.down; break;
-                case 4: CatImage.Image = formInstance.menu.player.left; break;
+                case 1: CatImage.Image = gameScreen.menu.player.up; break;
+                case 2: CatImage.Image = gameScreen.menu.player.right; break;
+                case 3: CatImage.Image = gameScreen.menu.player.down; break;
+                case 4: CatImage.Image = gameScreen.menu.player.left; break;
             }
         }
        

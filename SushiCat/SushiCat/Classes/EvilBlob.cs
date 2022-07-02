@@ -13,58 +13,51 @@ namespace SushiCat
         public int xCoordinate = 0;
         public int yCoordinate = 0;
         public int currentDirection = 0;
-        private GameScreen formInstance;
+        private GameScreen gameScreen;
 
-        public EvilBlob(GameScreen formInstance)
+        public EvilBlob(GameScreen gameScreen)
         {
             timer.Interval = 350;
             timer.Enabled = true;
-            timer.Tick += new EventHandler(timert);
+            timer.Tick += new EventHandler(MoveBlob);
 
             hometimer.Interval = 1;
             hometimer.Enabled = false;
-            hometimer.Tick += new EventHandler(hometimer_Tick);
+            hometimer.Tick += new EventHandler(GoHome);
 
             waittimer.Interval = 3000;
             waittimer.Enabled = false;
-            waittimer.Tick += new EventHandler(waittimer_t);
-            this.formInstance = formInstance;
+            waittimer.Tick += new EventHandler(Wait);
+            this.gameScreen = gameScreen;
             
         }
 
-        private void waittimer_t(object sender, EventArgs e)
-        {
-           
+        private void Wait(object sender, EventArgs e)
+        {          
             timer.Enabled = true;
             waittimer.Enabled= false;
         }
-        //ova da se napravi poarno
-        private void hometimer_Tick(object sender, EventArgs e)
+      
+        private void GoHome(object sender, EventArgs e)
         {
-            int xpos = 360;
-            int ypos = 480;
             int newX = BlobImage.Location.X;
             int newY = BlobImage.Location.Y;
 
-            if (newX == xpos) { newX = 360; }
-            else if (newX > xpos) { newX -= 5; }
-            else
-                newX += 5;
+            if (newX > 360) { newX -= 5;}
+            else if (newX < 360) newX += 5;
 
-            if (newY == ypos) { newY = 480; }
-            if (newY > ypos) { newY -= 5; }
-            else
-                newY += 5;
+            if (newY > 480) { newY -= 5;}
+            else if (newY < 480) newY += 5;
+
             BlobImage.Location=new Point(newX, newY);
-            if (BlobImage.Location.Y == ypos && BlobImage.Location.X == xpos)
+            if (BlobImage.Location.Y == 480 && BlobImage.Location.X == 360)
             {
                 xCoordinate = 360/40;
                 yCoordinate = 480/40;
-                BlobImage.Location = new Point(360, 480);
                 hometimer.Enabled = false;
                 waittimer.Enabled = true;
-                formInstance.cat.timer.Enabled = true;
-                formInstance.maze.SetUpMaze();
+                gameScreen.cat.timer.Enabled = true;
+                gameScreen.maze.SetUpMaze();
 
             }
         }
@@ -77,7 +70,7 @@ namespace SushiCat
             yCoordinate = 480 / 40;
             BlobImage.Location = new Point(360, 480);
             BlobImage.Size = new Size(40, 40);
-            formInstance.Controls.Add(BlobImage);
+            gameScreen.Controls.Add(BlobImage);
             BlobImage.Name = "BlobImage";
             BlobImage.SizeMode = PictureBoxSizeMode.StretchImage;
             BlobImage.BackColor = Color.Transparent;
@@ -85,136 +78,87 @@ namespace SushiCat
         }
        
        
-        public void MoveBlob(int direction)
-        {
-
-            if (checkDir(direction))
+        public void MoveBlobInDirection(int direction)
+        { 
+            if (CheckDirection(direction))
             {
                 currentDirection = direction;
                 switch (direction)
-                {
-
+                { 
                     case 1: BlobImage.Top -= 40; yCoordinate--; break;
                     case 2: BlobImage.Left += 40; xCoordinate++; break;
                     case 3: BlobImage.Top += 40; yCoordinate++; break;
                     case 4: BlobImage.Left -= 40; xCoordinate--; break;
-
                 }
             }
-
-
         }
-        private void timert(object sender, EventArgs e)
+        private void MoveBlob(object sender, EventArgs e)
         {
             UpdateDirection();
-            MoveBlob(currentDirection);
-            CheckForCollision();
+            MoveBlobInDirection(currentDirection);
+            gameScreen.CheckForCollision();
         }
+
+        private double GetDistance(int direction)
+        {
+            switch (direction)
+            {
+                case 1:
+                    if (CheckDirection(1)){
+                        return Euclid(xCoordinate, yCoordinate - 1, gameScreen.cat.xCoordinate, gameScreen.cat.yCoordinate);
+                    }
+                    break;
+                case 2:
+                    if (CheckDirection(2))
+                    {
+                        return Euclid(xCoordinate + 1, yCoordinate, gameScreen.cat.xCoordinate, gameScreen.cat.yCoordinate);
+                    }
+                    break;
+                case 3:
+                    if (CheckDirection(3))
+                    {
+                        return Euclid(xCoordinate, yCoordinate + 1, gameScreen.cat.xCoordinate, gameScreen.cat.yCoordinate);
+                    }
+                    break;
+                case 4:
+                    if (CheckDirection(4))
+                    {
+                        return Euclid(xCoordinate - 1, yCoordinate, gameScreen.cat.xCoordinate, gameScreen.cat.yCoordinate);
+                    }
+                    break;
+            }
+            return int.MaxValue;
+        }
+
         public void UpdateDirection()
         {
-            int x = xCoordinate;
-            int y = yCoordinate;
-            double distance1, distance2, distance3, distance4;
-            if (checkDir(1))
-            {
-                distance1 = euclid(x, y-1, formInstance.cat.xCoordinate, formInstance.cat.yCoordinate);
-            }
-            else
-            {
-                distance1 = 300000;
-            }
-            if (checkDir(2))
-            {
-                distance2 = euclid(x+1, y , formInstance.cat.xCoordinate, formInstance.cat.yCoordinate);
-            }
-            else
-            {
-                distance2 = 300000;
-            }
-            if (checkDir(3))
-            {
-                distance3 = euclid(x, y+1, formInstance.cat.xCoordinate, formInstance.cat.yCoordinate);
-            }
-            else
-            {
-                distance3 = 300000;
-            }
-            if (checkDir(4))
-            {
-                distance4 = euclid(x-1, y, formInstance.cat.xCoordinate, formInstance.cat.yCoordinate);
-            }
-            else
-            {
-                distance4 = 300000;
-            }
-            currentDirection = compare(distance1, distance2, distance3, distance4);
+            double distance1 = GetDistance(1);
+            double distance2 = GetDistance(2);
+            double distance3 = GetDistance(3);
+            double distance4 = GetDistance(4);
+            currentDirection = Compare(distance1, distance2, distance3, distance4);
         }
 
-        private int compare(double a, double b, double c, double d)
+        private double Min(double x,double y)
         {
-            if (a <= b)
-            {
-                if (c <= d)
-                {
-                    if (c <= a)
-                    {
-                        return 3;
-                    }
-                    else
-                    {
-                        return 1;
-                    }
-                }
-                else
-                {
-                    if (d <= a)
-                    {
-                        return 4;
-                    }
-                    else
-                    {
-                        return 1;
-                    }
-                }
-            }
-
-            else
-            {
-                if (c <= d)
-                {
-                    if (c <= b)
-                    {
-                        return 3;
-                    }
-                    else
-                    {
-                        return 2;
-                    }
-                }
-                else
-                {
-                    if (d <= b)
-                    {
-                        return 4;
-                    }
-                    else
-                    {
-                        return 2;
-                    }
-                }
-            }
+            if (x < y) return x;
+            else return y;
         }
-
-        public double euclid (int x,int y,int x1,int y1)
+        private int Compare(double a, double b, double c, double d)
         {
-            double a = x - x1;
-            double b = y- y1;
-            a = Math.Pow(a, 2);
-            b = Math.Pow(b, 2);
-            double full = a + b;
-            return Math.Sqrt(full);
+            double smallest = Min(a, Min(b, Min(c, d)));
+            if (smallest == a) return 1;
+            if (smallest == b) return 2;
+            if (smallest == c) return 3;
+            if (smallest == d) return 4;
+            return 0;
         }
-        private bool checkDir(int direction)
+
+        public double Euclid (int x,int y,int x1,int y1)
+        {
+            return Math.Sqrt(Math.Pow(x - x1, 2) + Math.Pow(y - y1, 2));
+        }
+        private bool CheckDirection(int direction)
         {
             int x = xCoordinate;
             int y = yCoordinate;
@@ -225,40 +169,13 @@ namespace SushiCat
                 case 3: y++; break;
                 case 4: x--; break;
             }
-
             if (x < 0 || y < 0 || x > 19 || y > 19)
                 return false;
-
-            if (formInstance.maze.Matrix[y, x] !=1)
+            if (gameScreen.maze.Matrix[y, x] !=1)
                 return true;
             else
                 return false;
-
-        }
-
-        //dali da odi gore vo gameScreen?
-        public void CheckForCollision()
-        {
-            if (xCoordinate == formInstance.cat.xCoordinate && yCoordinate == formInstance.cat.yCoordinate)
-            {
-                
-                formInstance.gameInfo.lives+=1;
-                if (formInstance.gameInfo.lives == 2)
-                {
-                    formInstance.StopGame();
-                }
-                else
-                {
-                    timer.Enabled = false;
-                    hometimer.Enabled = true;
-                    formInstance.cat.timer.Enabled = false;
-                }
-                formInstance.gameInfo.LivesCheck();
-                formInstance.maze.SetUpMaze();
-            }
-
-        }
-       
+        }   
 
     }
 

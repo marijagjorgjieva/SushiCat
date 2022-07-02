@@ -13,15 +13,15 @@ namespace SushiCat
     {
        
         public int Points { set; get; } = 0;
-        private GameScreen formInstance;
+        private GameScreen gameScreen;
         Label gameInfo;
         public int lives { set; get; } = -1;
         private List<PictureBox> livesImages;
         private static SoundPlayer sound = new SoundPlayer(Properties.Resources.GhostEncounter);
-        public GameInfo(GameScreen screen)
+        public GameInfo(GameScreen gameScreen)
         {
             gameInfo = new Label();
-            this.formInstance = screen;
+            this.gameScreen = gameScreen;
             MakeLabel();
             MakeLogo();
             MakeLives();        
@@ -40,7 +40,7 @@ namespace SushiCat
                 livesImages[i].Image = Properties.Resources.FullHeart;
                 livesImages[i].Location = new Point(xPos, 2);
                 livesImages[i].Size = new Size(30, 30);
-                formInstance.Controls.Add(livesImages[i]);
+                gameScreen.Controls.Add(livesImages[i]);
                 livesImages[i].SizeMode = PictureBoxSizeMode.StretchImage;
                 livesImages[i].BackgroundImage = Properties.Resources.BrickTile;
                 livesImages[i].BringToFront();
@@ -55,7 +55,7 @@ namespace SushiCat
             logo.Image = Properties.Resources.Logo;
             logo.Location = new Point(240, 360);
             logo.Size = new Size(320, 80);
-            formInstance.Controls.Add(logo);
+            gameScreen.Controls.Add(logo);
             logo.SizeMode = PictureBoxSizeMode.CenterImage;
             logo.BackgroundImage = Properties.Resources.BrickTile;
             logo.BringToFront();
@@ -64,14 +64,14 @@ namespace SushiCat
         //creating game info label
         private void MakeLabel()
         {
-            gameInfo.Text = String.Format("Player:{0}   Points:{1}", formInstance.menu.player.playerName, Points);
+            gameInfo.Text = String.Format("Player:{0}   Points:{1}", gameScreen.menu.player.playerName, Points);
             gameInfo.Location = new Point(0, 2);
             gameInfo.Font = new Font("Bahnschrift", 12, FontStyle.Bold);
             gameInfo.TextAlign = ContentAlignment.MiddleCenter;
             gameInfo.AutoSize = false;
             gameInfo.Width = 40 * 6;
             gameInfo.Height = 28;
-            formInstance.Controls.Add(gameInfo);
+            gameScreen.Controls.Add(gameInfo);
             gameInfo.BackColor = ColorTranslator.FromHtml("#F9B9BA");
             gameInfo.ForeColor = Color.White;
             gameInfo.BorderStyle = BorderStyle.Fixed3D;
@@ -81,7 +81,7 @@ namespace SushiCat
         //updating label with the new info
         public void UpdateLabel()
         {
-            gameInfo.Text = String.Format("Player: {0}   Points: {1}", formInstance.menu.player.playerName, formInstance.gameInfo.Points);
+            gameInfo.Text = String.Format("Player: {0}   Points: {1}", gameScreen.menu.player.playerName, gameScreen.gameInfo.Points);
         }
 
         //check if any lives left, replace full heart with blank for a life lost
@@ -90,7 +90,7 @@ namespace SushiCat
             
             if (lives == 2)
             {
-                formInstance.GameOver();
+                gameScreen.GameOver();
             }
             else
             {
