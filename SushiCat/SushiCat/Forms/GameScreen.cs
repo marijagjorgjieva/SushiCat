@@ -74,10 +74,10 @@ namespace SushiCat
             base.OnKeyDown(e);
             switch (e.KeyCode)
             {
-                case Keys.Up:  cat.ChangeDirection(1); break;
-                case Keys.Right:  cat.ChangeDirection(2); break;
-                case Keys.Down:  cat.ChangeDirection(3); break;
-                case Keys.Left:  cat.ChangeDirection(4); break;
+                case Keys.Up:  cat.currentDirection = 1; break;
+                case Keys.Right:  cat.currentDirection = 2; break;
+                case Keys.Down:  cat.currentDirection = 3; break;
+                case Keys.Left:  cat.currentDirection = 4; break;
             }
         }
 

@@ -29,7 +29,6 @@ namespace SushiCat
             waittimer.Enabled = false;
             waittimer.Tick += new EventHandler(Wait);
             this.gameScreen = gameScreen;
-            
         }
 
         private void Wait(object sender, EventArgs e)

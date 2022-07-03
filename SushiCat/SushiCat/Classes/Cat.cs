@@ -37,11 +37,6 @@ namespace SushiCat
             CatImage.SizeMode = PictureBoxSizeMode.StretchImage;
             CatImage.BackColor = Color.Transparent;
         }
-       
-        public void ChangeDirection(int direction)
-        {
-            currentDirection = direction;
-        }
         private void MoveCat(int direction)
         {
   
@@ -88,7 +83,6 @@ namespace SushiCat
                 return true;
             else
                 return false;
-
         }
         private void ChangeImage()
         {
