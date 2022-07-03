@@ -19,5 +19,7 @@
 &emsp;<img src="https://user-images.githubusercontent.com/82838042/177001735-0b2e4aaf-ebd3-4906-90cf-aa6ce2235bc8.jpg" alt="Customize" width="500"/> <br /><br/>
 &emsp;**Игра:** <br/>                           
 &emsp;<img src="https://user-images.githubusercontent.com/82838042/177001744-058340d0-d9d7-4834-a157-e25e77b453f4.jpg" alt="Gameplay" width="500"/> <br /><br/>
-&emsp;**Екран за победа** <br/>                           
+&emsp;**Екран за победа:** <br/>                           
 &emsp;<img src="https://user-images.githubusercontent.com/82838042/177001761-5b7155d9-2301-4b4b-a294-eb460e9b22a6.jpg" alt="Win" width="500"/> <br /><br/>
+## Документација
+&emsp;Деталната документација за играта можете да ја најдете <a href="https://github.com/marijagjorgjieva/SushiCat/wiki">овде</a>.
