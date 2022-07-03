@@ -1,2 +1,27 @@
 # SushiCat
-<p>A pacman inspired Winforms C# game</p>
+
+&emsp;Концептот на играта **SushiCat** е инспириран од популарната игра Pacman, односно претставува maze chase игра каде играчот контролира мачка низ лавиринт и собира суши, со избегнување на карактер кој го брка играчот.<br /> &emsp;Изработена е за проектна задача по предметот Визуелно Програмирање на „Факултетот за информатички науки и компјутерско инженерство“ во Windows Forms за .NET Framework 4.7.2.
+
+## Документација
+&emsp;Деталната документација за играта можете да ја најдете <a href="https://github.com/marijagjorgjieva/SushiCat/wiki">овде</a> (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧
+
+## Упатство за играње
+
+&emsp;**Цел:** Со контролирање на мачката низ лавиринтот, да се изеде секое суши поставено на патеката.<br />
+&emsp;**Контроли:** Движење на мачката низ лавиринтот со помош на стрелките од тастатурата.<br />
+&emsp;**Внимание**: За секоја средба со црвениот карактер се губи по еден живот.  Играта се започнува со три животи.<br />
+&emsp;**Персонализација:** Од делот *Customize* во менито од играта, може да се промени името на играчот или пак бојата на карактерот со кој играте. Нова боја на карактер се отклучува со одредено достигнување во играта.<br /><br/>
+&emsp;**Екран за помош во играта:** <br/>
+                           
+&emsp;<img src="https://user-images.githubusercontent.com/82838042/177001722-5cef050c-2507-4578-b839-03a3f5427ce9.jpg" alt="HelpScreen" width="400"/><br/>
+
+## Изглед на игра
+&emsp;**Главно мени:** <br/>                            
+&emsp;<img src="https://user-images.githubusercontent.com/82838042/177001691-b42fe4d0-8dd1-475c-912e-faf73bbee636.jpg" alt="Menu" width="500"/><br /><br/>
+&emsp;**Екран за персонализација:** <br/>                           
+&emsp;<img src="https://user-images.githubusercontent.com/82838042/177001735-0b2e4aaf-ebd3-4906-90cf-aa6ce2235bc8.jpg" alt="Customize" width="500"/> <br /><br/>
+&emsp;**Игра:** <br/>                           
+&emsp;<img src="https://user-images.githubusercontent.com/82838042/177001744-058340d0-d9d7-4834-a157-e25e77b453f4.jpg" alt="Gameplay" width="500"/> <br /><br/>
+&emsp;**Екран за победа:** <br/>                           
+&emsp;<img src="https://user-images.githubusercontent.com/82838042/177001761-5b7155d9-2301-4b4b-a294-eb460e9b22a6.jpg" alt="Win" width="500"/> <br /><br/>
+
